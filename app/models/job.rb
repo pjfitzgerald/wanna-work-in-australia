@@ -1,4 +1,4 @@
 class Job < ApplicationRecord
   belongs_to :venue
-  has_many :applications
+  has_many :applications, dependent: :destroy
 end

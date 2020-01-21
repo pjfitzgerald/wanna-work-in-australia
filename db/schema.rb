@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_18_071643) do
+ActiveRecord::Schema.define(version: 2020_01_21_131549) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 2020_01_18_071643) do
     t.bigint "venue_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "title"
     t.index ["venue_id"], name: "index_jobs_on_venue_id"
   end
 
@@ -44,12 +45,11 @@ ActiveRecord::Schema.define(version: 2020_01_18_071643) do
   create_table "reviews", force: :cascade do |t|
     t.integer "rating"
     t.text "content"
-    t.datetime "date"
-    t.bigint "application_id"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["application_id"], name: "index_reviews_on_application_id"
+    t.bigint "job_id"
+    t.index ["job_id"], name: "index_reviews_on_job_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
@@ -82,7 +82,7 @@ ActiveRecord::Schema.define(version: 2020_01_18_071643) do
 
   add_foreign_key "applications", "jobs"
   add_foreign_key "jobs", "venues"
-  add_foreign_key "reviews", "applications"
+  add_foreign_key "reviews", "jobs"
   add_foreign_key "reviews", "users"
   add_foreign_key "venues", "regions"
 end
