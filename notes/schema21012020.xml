@@ -187,6 +187,9 @@
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
+<row name="title" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
 <row name="date_commenced" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>

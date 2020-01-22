@@ -50,6 +50,7 @@ end
 seed_venues
 
 
+
 def seed_jobs
   for x in (0..25) do
     Job.create!(title: "TestTitle#{x}", venue: Venue.order('RANDOM()').first)
@@ -67,14 +68,24 @@ def seed_applications
       # for each traveller: create 2 applications for random jobs
     end
   end
+  for x in (0..10) do 
+    Application.create!(status: "Accepted", traveller: Traveller.order('RANDOM()').first, job: Job.order('RANDOM()').first)
+  end
   puts "#{Application.count} applications created"
 end
 
 seed_applications
 
 
+
+
 def seed_reviews
-  
+  Application.where(status: "Accepted").each do |application|
+    # puts application.traveller
+    # puts application.job.venue.venue_admin
+    Review.create!(user: application.traveller, rating: (0..10).to_a.sample, content: "blah blah blah!!!", job: application.job)
+    Review.create!(user: application.job.venue.venue_admin, rating: (0..10).to_a.sample, content: "blah blah blah!!!", job: application.job)
+  end
   puts "#{Review.count} reviews created"
 end
 
@@ -84,11 +95,6 @@ seed_reviews
 
 
 puts 'Done!'
-
-
-
-
-
 
 
 
