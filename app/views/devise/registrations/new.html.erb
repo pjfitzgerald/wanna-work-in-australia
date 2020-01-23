@@ -17,7 +17,16 @@
                 input_html: { autocomplete: "new-password" } %>
   </div>
 
-  <div class="form-actions">
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="userType" id="traveller" value="traveller" checked>
+    <label class="form-check-label" for="traveller">Traveller</label>
+  </div>
+  <div>
+    <input class="form-check-input" type="radio" name="userType" id="venue_admin" value="venue_admin">
+    <label class="form-check-label" for="venue_admin">Venue Administrator</label>
+  </div>
+
+  <div class="form-actions btn btn-primary">
     <%= f.button :submit, "Sign up" %>
   </div>
 <% end %>
