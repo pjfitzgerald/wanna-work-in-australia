@@ -1,9 +1,11 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-wwia mb-3">
-  <%= link_to "#", class: "navbar-brand" do %>
+<div class="navbar sticky-top navbar-expand-sm navbar-light navbar-wwia mb-3">
+  <%= link_to "/", class: "navbar-brand" do %>
     <%= image_tag "https://res.cloudinary.com/dkowfxwpp/image/upload/v1579755994/wwia_logo_llpv0y.png" %>
     <% end %>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <h2 class="">Wanna Work In Australia?</h2>
+
+  <button class="navbar-toggler btn-primary" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
@@ -12,10 +14,10 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item active">
-          <%= link_to "Home", "#", class: "nav-link" %>
+          <%= link_to "Home", root_path, class: "nav-link" %> 
         </li>
         <li class="nav-item">
-          <%= link_to "Applications", "#", class: "nav-link" %>
+          <%= link_to "Applications", user_applications_path(current_user), class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
           <%= image_tag "https://kitt.lewagon.com/placeholder/users/pjfitzgerald", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>

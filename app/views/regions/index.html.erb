@@ -1,10 +1,10 @@
 
 <div class="container">
-  <div>
+  <div class="row row-cols-3">
     <% @regions.each do |region| %>
-      <%= link_to region_path(region) do %>
+      <%= link_to region_path(region), class: "a-primary" do %>
         <div class="card-trip">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+          <img src="https://res.cloudinary.com/dkowfxwpp/image/upload/v1579955207/sydney1_ex0vop.jpg" />
           <div class="card-trip-infos">
             <div>
               <h2><%= region.name %></h2>
@@ -17,11 +17,4 @@
   </div>
 </div>
 
-<table class="table">
-  <thead>
 
-  </thead>
-  <tbody>
-  
-  </tbody>
-</table>
