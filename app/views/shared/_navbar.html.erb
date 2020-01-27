@@ -16,6 +16,9 @@
         <li class="nav-item active">
           <%= link_to "Home", root_path, class: "nav-link" %> 
         </li>
+        <li class="nav-item active">
+          <%= link_to "Dashboard", user_path(current_user), class: "nav-link" %> 
+        </li>
         <li class="nav-item">
           <%= link_to "Applications", user_applications_path(current_user), class: "nav-link" %>
         </li>
