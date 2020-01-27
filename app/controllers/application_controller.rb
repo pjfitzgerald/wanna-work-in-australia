@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
   def index
     @user = User.find(params[:user_id])
-    @applications = 
+    # @applications = 
   end
 
   private

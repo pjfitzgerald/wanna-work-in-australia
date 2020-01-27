@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_27_111514) do
+ActiveRecord::Schema.define(version: 2020_01_21_131549) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,10 +18,10 @@ ActiveRecord::Schema.define(version: 2020_01_27_111514) do
   create_table "applications", force: :cascade do |t|
     t.datetime "date_applied"
     t.string "status"
+    t.bigint "traveller_id"
     t.bigint "job_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "user_id"
     t.index ["job_id"], name: "index_applications_on_job_id"
   end
 
@@ -73,18 +73,16 @@ ActiveRecord::Schema.define(version: 2020_01_27_111514) do
     t.string "name"
     t.string "coordinates"
     t.string "address"
+    t.bigint "venue_admin_id"
     t.bigint "region_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "user_id"
     t.index ["region_id"], name: "index_venues_on_region_id"
   end
 
   add_foreign_key "applications", "jobs"
-  add_foreign_key "applications", "users"
   add_foreign_key "jobs", "venues"
   add_foreign_key "reviews", "jobs"
   add_foreign_key "reviews", "users"
   add_foreign_key "venues", "regions"
-  add_foreign_key "venues", "users"
 end
