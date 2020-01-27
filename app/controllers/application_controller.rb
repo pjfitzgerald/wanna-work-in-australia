@@ -2,8 +2,16 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
 
   def index
-    @user = User.find(params[:user_id])
-    # @applications = 
+    @user = User.find(current_user.id)
+    @applications = Application.where(traveller: @user)
+  end
+
+  def new
+    @application = Application.new
+  end
+
+  def create
+    @application = Application.create!(traveller: current_user)
   end
 
   private
@@ -12,3 +20,4 @@ class ApplicationController < ActionController::Base
     params.require(:restaurant).permit(:user_id)
   end
 end
+
