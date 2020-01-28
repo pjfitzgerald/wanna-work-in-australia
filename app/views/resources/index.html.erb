@@ -1,0 +1,20 @@
+
+<div class="container">
+  <div class="row row-cols-3">
+    <% @resources.each do |resource| %>
+      <%= link_to resource_path(resource), class: "a-primary" do %>
+        <div class="card-trip">
+          <img src="https://res.cloudinary.com/dkowfxwpp/image/upload/v1579955207/sydney1_ex0vop.jpg" />
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= resource.title %></h2>
+              <p>resource.description (truncated) here</p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>  
+  </div>
+</div>
+
+
