@@ -94,6 +94,20 @@ seed_reviews
 
 
 
+def seed_resources
+  for x in (0..8) do
+    Resource.create!(title: "ResourceTitle#{x}", content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum est, sequi voluptatem animi deserunt eos, vero earum, labore facere expedita impedit ex sit saepe ab inventore! Deserunt inventore cumque aut!")
+  end
+  puts "#{Resource.count} resources created"
+end
+
+seed_resources
+
+
+
+
+
+
 puts 'Done!'
 
 
