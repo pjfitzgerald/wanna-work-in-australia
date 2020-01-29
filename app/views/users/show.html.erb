@@ -1,2 +1,42 @@
 
-<p>This is the dashboard for: <%= @user.first_name %></p>
+<h3>Welcome back, <%= @user.first_name %>.</h3>
+
+
+<div class="container dashboard-container">
+  <div class="row">
+    <div class="col-sm card-trip">
+      <h2>Applications</h2>
+      <% @applications.each do |application| %>
+        <div class="card-product">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <div class="card-product-infos">
+            <h2><%= application.job.title %></h2>
+            <p><em>Date Created: <%= application.created_at %> </em></p>
+          </div>
+        </div>
+      <% end %>
+      <%= link_to "Open Applications", user_applications_path(current_user), class: "btn btn-secondary" %>
+
+    </div>
+    <div class="col-sm card-trip"> 
+      <h2>Search</h2>
+      <br>
+      <p>Search for your ideal work venue!</p>
+      <br>
+      <%= link_to "Go!", venue_search_path, class: "btn btn-secondary" %>
+    </div>
+
+    
+    <div class="col-sm card-trip"> 
+    <h2>Resources</h2>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    </div>
+  </div>
+</div>
+
+
+
