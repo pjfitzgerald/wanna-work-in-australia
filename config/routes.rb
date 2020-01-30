@@ -12,7 +12,9 @@ Rails.application.routes.draw do
   
   resources :resources, only: [:index, :show]
 
-  resources :venues, only: [:index, :show]
+  resources :venues, only: [:index, :show] do 
+    resources :jobs, only: [:index, :show]
+  end
   get "search", to: "venues#search", as: :venue_search
 
 end

@@ -8,7 +8,7 @@ class JobsController < ApplicationController
   def create
     @job = Job.new(job_params)   #double check syntax for retrieving params
 
-    #  check for empty fields, refactor to loop over attributes instead of if-statements
+    #  check for empty fields
     if params[:job][:title].empty?
       flash[:notice] = "Woops! Please enter a title!"
     elsif params[:job][:description].empty?
