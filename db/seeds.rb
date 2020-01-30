@@ -9,6 +9,7 @@ Region.destroy_all
 Job.destroy_all
 Application.destroy_all
 User.destroy_all
+Resource.destroy_all
 
 
 def load_regions_from_csv
@@ -95,9 +96,9 @@ seed_reviews
 
 
 def seed_resources
-  for x in (0..8) do
-    Resource.create!(title: "ResourceTitle#{x}", content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum est, sequi voluptatem animi deserunt eos, vero earum, labore facere expedita impedit ex sit saepe ab inventore! Deserunt inventore cumque aut!")
-  end
+  Resource.create!(title: "Visa Information", content: "")
+  Resource.create!(title: "Superannuation", content: "")
+  Resource.create!(title: "Driving in Australia", content: "")
   puts "#{Resource.count} resources created"
 end
 
