@@ -1,6 +1,106 @@
 // Specific CSS for your home-page
 
-.home-container {
-  height: 450px;
-  background-color: $primary;
+// .home-container {
+//   height: 450px;
+//   background-color: $primary;
+// }
+
+.features-container {
+  width: 100%;
+  text-align: center;
+  // padding: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.features-container h2 {
+  padding: 10px;
+  
+}
+
+.left-feature-container {
+  width: 50%;
+  float: left;
+  border-right: 2px solid black;
+  min-height: 600px;
+}
+
+.right-feature-container {
+  width: 50%;
+  float: right;
+  min-height: 600px;
+}
+
+.small-features-container {
+  width: 100%;
+  min-height: 600px;
+
+}
+
+.small-features-container > * {
+  border-bottom: 2px solid black;
+}
+
+.small-features-container > * > h2 {
+  margin-top: 10px;
+}
+
+.small-features {
+  min-height: 150px;
+}
+
+.small-process {
+  min-height: 150px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------- Media Queries for window size -------- */
+/* -------- Columns side-by-side vs stacked -------- */
+
+
+@media (max-width: 576px) {
+  .features-container { max-width: 540px; }
+
+  .left-feature-container { display: none; }
+  .right-feature-container { display: none; }
+
+  .small-features-container { display: block; }
+}
+
+@media (min-width: 768px) {
+  .features-container {
+    max-width: 720px;
+  }
+
+  .small-features-container {
+    display: none;
+  }
+
+}
+
+@media (min-width: 992px) {
+  .features-container {
+    max-width: 960px;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  .features-container {
+    max-width: 100%;
+  }
+
 }
