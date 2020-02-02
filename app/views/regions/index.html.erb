@@ -4,11 +4,11 @@
     <% @regions.each do |region| %>
       <%= link_to region_path(region), class: "a-primary" do %>
         <div class="card-trip">
-          <img src="https://res.cloudinary.com/dkowfxwpp/image/upload/v1579955207/sydney1_ex0vop.jpg" />
+          <%= image_tag "#{region.banner}", src: 'Image Not Found' %>
           <div class="card-trip-infos">
             <div>
               <h2><%= region.name %></h2>
-              <p>region.description (truncated) here</p>
+              <p><%= region.description %></p>
             </div>
           </div>
         </div>

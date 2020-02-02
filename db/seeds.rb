@@ -17,7 +17,7 @@ def load_regions_from_csv
   file_path = 'tourism_regions.csv'
   CSV.foreach(file_path, csv_options) do |row|
     # puts "#{row[:state]}: #{row[:region]}"
-    Region.create!(name: row[:region], state: row[:state])
+    Region.create!(name: row[:region], state: row[:state], banner: row[:banner])
   end
   puts "#{Region.count} regions loaded"
 end
@@ -27,6 +27,7 @@ load_regions_from_csv
 
 
 def seed_users
+  Traveller.create!(first_name: "Pat The Tester", last_name: "Fitz", email: "test@test.com", password: "123456")
   for x in (0..10) do 
     Traveller.create!(first_name: "Jerome#{x}", last_name: "
       Dingus#{x}", email: "testtraveller#{x}@test.com", password: "123456")
