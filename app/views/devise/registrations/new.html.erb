@@ -1,7 +1,8 @@
-<h2>Sign up</h2>
-<br>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<div class="container">
+  <h2>Sign up</h2>
+  <br>
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
@@ -18,7 +19,7 @@
                 input_html: { autocomplete: "new-password" } %>
   </div>
 
-<%#   
+  <%#   
   <div class="form-check mb-2">
     <input class="form-check-input" type="radio" name="userType" id="traveller" value="traveller" checked>
     <label class="form-check-label radio-inline" for="traveller">Traveller</label>
@@ -32,8 +33,11 @@
       <%= f.button :submit, "Sign up" %>
   </div>
 
-<% end %>
+  <% end %>
+  
+  <%= render "devise/shared/links" %>
+
+</div>
 
 
 
-<%= render "devise/shared/links" %>
