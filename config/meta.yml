@@ -1,0 +1,8 @@
+
+
+meta_product_name: "Wanna Work In Australia"
+meta_title: "WWIA - Your Destination For Working in Australia"
+meta_description: "We help international travellers find quality work in our beautiful country, Australia."
+meta_image: "banner.jpg" # should exist in `app/assets/images/`
+
+# twitter_account: "@product_twitter_account"   # required for Twitter Cards
