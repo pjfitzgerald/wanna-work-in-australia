@@ -6,6 +6,17 @@ class UsersController < ApplicationController
     @applications = Application.where(traveller: current_user)
     @resources = Resource.all
     # raise
+
+
+    # case
+    # when @user.is_traveller?
+    #   traveller_dashboard
+    # when @user.venue_admin?
+    #   venue_admin_dashboard
+    # else
+    #   # Unknown user type? Render error or use a default.
+    # end
+
   end
 
   private
