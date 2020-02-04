@@ -7,5 +7,11 @@ class UsersController < ApplicationController
     @resources = Resource.all
     # raise
   end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:id)
+  end
   
 end

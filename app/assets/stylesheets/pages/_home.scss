@@ -20,17 +20,24 @@
   
 }
 
+// .features-container li {
+//   margin: 30px;
+  
+// }
+
 .left-feature-container {
   width: 50%;
   float: left;
   border-right: 2px solid black;
   min-height: 900px;
+  padding-left: 15px;
 }
 
 .right-feature-container {
   width: 50%;
   float: right;
   min-height: 900px;
+  padding-left: 30px;
 }
 
 .small-features-container {

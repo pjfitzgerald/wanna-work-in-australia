@@ -8,35 +8,37 @@
 /*——————————— CARDS (INDIVIDUAL) —————————— */ 
 
 
-.card-trip {
-  overflow: hidden;
+.card-dashboard {
+  overflow: auto;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin: 15px;
   padding: 10px;
+  height: 400px
 }
 
-.card-trip > img {
-  height: 200px;
+.card-dashboard > img {
+  height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
-.card-trip h2 {
+.card-dashboard h2 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
   text-align: center;
 }
 
-.card-trip p {
+.card-dashboard p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
+  text-align: center;
 }
 
 
-.card-trip .card-trip-infos {
+.card-dashboard .card-dashboard-infos {
   padding: 16px;
   display: flex;
   justify-content: space-between;
@@ -44,16 +46,25 @@
   position: relative;
 }
 
-.card-trip-infos .card-trip-user {
+.card-dashboard-infos .card-dashboard-user {
   position: absolute;
   right: 16px;
   top: -20px;
   width: 40px;
 }
 
-.card-product {
+.applications-container {
+  overflow: auto;
+  background: white;
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  // margin: 15px;
+  // padding: 10px;
+  // height: 400px
+}
+
+.card-application {
   overflow: hidden;
-  height: 20vh;
+  height: 10vh;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -61,20 +72,20 @@
   margin: 15px;
 }
 
-.card-product img {
+.card-application img {
   height: 100%;
   width: 60px;
   object-fit: cover;
 }
 
-.card-product h2 {
+.card-application h2 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
   
 }
 
-.card-product p {
+.card-application p {
   font-size: 12px;
   line-height: 1.4;
   opacity: .7;
@@ -82,6 +93,6 @@
   margin-top: 8px;
 }
 
-.card-product .card-product-infos {
+.card-application .card-application-infos {
   padding: 10px;
 }

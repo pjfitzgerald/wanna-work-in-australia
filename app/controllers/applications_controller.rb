@@ -7,6 +7,10 @@ class ApplicationsController < ApplicationController
     @applications = Application.where(traveller: @user)
   end
 
+  def show
+    @application = Application.find(params[:id])
+  end
+
   def new
     @application = Application.new
   end
@@ -18,6 +22,7 @@ class ApplicationsController < ApplicationController
   private
 
   def application_params
-    params.require(:restaurant).permit(:user_id)
+    params.require(:application).permit(:traveller_id)
   end
+  
 end
