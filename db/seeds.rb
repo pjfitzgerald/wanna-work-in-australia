@@ -97,9 +97,9 @@ seed_reviews
 
 
 def seed_resources
-  Resource.create!(title: "Visa Information", content: "")
-  Resource.create!(title: "Superannuation", content: "")
-  Resource.create!(title: "Driving in Australia", content: "")
+  Resource.create!(title: "Visa Information", description: "")
+  Resource.create!(title: "Superannuation", description: "")
+  Resource.create!(title: "Driving in Australia", description: "")
   puts "#{Resource.count} resources created"
 end
 
