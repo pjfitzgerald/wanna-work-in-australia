@@ -29,20 +29,20 @@
   width: 50%;
   float: left;
   border-right: 2px solid black;
-  min-height: 900px;
+  min-height: 60vh;
   padding-left: 15px;
 }
 
 .right-feature-container {
   width: 50%;
   float: right;
-  min-height: 900px;
+  min-height: 60vh;
   padding-left: 30px;
 }
 
 .small-features-container {
   width: 100%;
-  min-height: 900px;
+  // min-height: 900px;
 
 }
 
@@ -55,11 +55,11 @@
 }
 
 .small-features {
-  min-height: 150px;
+  min-height: 250px;
 }
 
 .small-process {
-  min-height: 150px;
+  min-height: 250px;
 }
 
 
@@ -78,8 +78,8 @@
 /* -------- Columns side-by-side vs stacked -------- */
 
 
-@media (max-width: 576px) {
-  .features-container { max-width: 540px; }
+@media (max-width: 767px) {
+  .features-container { max-width: 720px; }
 
   .left-feature-container { display: none; }
   .right-feature-container { display: none; }
