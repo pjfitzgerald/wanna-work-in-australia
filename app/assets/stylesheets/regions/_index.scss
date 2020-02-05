@@ -1,1 +1,49 @@
 @import "show";
+
+
+
+.region-card {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 15px;
+}
+
+.region-card > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.region-card h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.region-card p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.region-card .region-card-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+a:link{
+  text-decoration: none;
+}
+
+
+
+
+
+.state-container {
+  border-bottom: black 2px solid ;
+}

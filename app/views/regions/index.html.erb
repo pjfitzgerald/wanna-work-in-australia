@@ -1,19 +1,76 @@
 
 <div class="container">
   <div class="row row-cols-3">
+
+    <%# List all regions %>
+    
     <% @regions.each do |region| %>
       <%= link_to region_path(region), class: "a-primary" do %>
-        <div class="card-dashboard">
-          <%= image_tag "#{region.banner}", src: 'Image Not Found' %>
-          <div class="card-dashboard-infos">
+        <div class="region-card">
+          <% if region.banner %>
+            <%= image_tag "#{region.banner}", src: 'img not found' %>
+          <% else %>
+            <%= image_tag "wwia_logo.png", src: 'img not found' %>
+          <% end %>
+          <div class="region-card-infos">
             <div>
               <h2><%= region.name %></h2>
-              <p><%= region.description %></p>
+              <p> clipped region description goes here</p>
             </div>
           </div>
         </div>
       <% end %>
     <% end %>  
+
+    <%# List regions by state %>
+    
+    <div class="state-container">
+      <% @regions.where(state: "VIC") do |region| %>
+
+      <% end %>
+    </div>
+
+    <div class="state-container">
+      <% @regions.where(state: "NSW") do |region| %>
+
+      <% end %>
+    </div>
+
+    <div class="state-container">
+      <% @regions.where(state: "QLD") do |region| %>
+
+      <% end %>
+    </div>
+
+    <div class="state-container">
+      <% @regions.where(state: "SA") do |region| %>
+
+      <% end %>
+    </div>
+
+    <div class="state-container">
+      <% @regions.where(state: "NT") do |region| %>
+
+      <% end %>
+    </div>
+
+    <div class="state-container">
+      <% @regions.where(state: "WA") do |region| %>
+
+      <% end %>
+    </div>
+
+    <div class="state-container">
+      <% @regions.where(state: "TAS") do |region| %>
+
+      <% end %>
+    </div>
+
+    <% @regions.where(state: "ACT") do |region| %>
+
+    <% end %>
+
+
   </div>
 </div>
 
