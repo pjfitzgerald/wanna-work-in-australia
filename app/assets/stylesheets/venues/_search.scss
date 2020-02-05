@@ -1,0 +1,22 @@
+
+
+.search-form-container {
+  display: flex;
+}
+
+.map-info-container {
+  display: flex;
+
+}
+
+.map-container {
+  height: 50vh;   // arbitrary for now
+  width: 70%;
+  float: left;
+}
+
+.info-container {
+  height: 50vh;
+  width: 30%;
+  float: right;
+}

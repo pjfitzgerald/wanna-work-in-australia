@@ -28,16 +28,17 @@
 .left-feature-container {
   width: 50%;
   float: left;
-  border-right: 2px solid black;
-  min-height: 60vh;
-  padding-left: 15px;
+  // border-right: 2px solid black;
+  min-height: 50vh;
+  padding: 30px 15px 15px 15px;
 }
+
 
 .right-feature-container {
   width: 50%;
   float: right;
-  min-height: 60vh;
-  padding-left: 30px;
+  min-height: 50vh;
+  padding: 30px 15px 15px 15px;
 }
 
 .small-features-container {

@@ -2,7 +2,9 @@ class VenuesController < ApplicationController
 
 
   def search
+    @user = current_user
     @venues = Venue.all
+    @venue = Venue.first
     @regions = Region.all
   end
 

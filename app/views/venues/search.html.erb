@@ -1,2 +1,24 @@
 
-<p>test!</p>
+<div class="container">
+  <p>Search for a venue!</p>
+
+  <div class="search-form-container">
+    <%= simple_form_for @venue do |f| %>
+      <%= f.input :name %>
+      <%= f.button :submit %>
+    <% end %>
+  
+  </div>
+
+  <div class="map-info-container">
+    <div class="map-container">
+    
+    </div>
+    <div class="info-container">
+    
+    </div>
+  </div>
+
+</div>
+
+
