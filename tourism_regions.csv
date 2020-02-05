@@ -1,77 +1,77 @@
 State,Region,Banner
 ACT,Canberra,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643701/wwia/canberra_and_surrounds_oced83.jpg
-NSW,TheMurray,
+NSW,The Murray,
 NSW,Sydney,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643757/wwia/sydney_teebdw.jpg
-NSW,SouthCoast,
-NSW,SnowyMountains,
+NSW,South Coast,
+NSW,Snowy Mountains,
 NSW,Riverina,
-NSW,OutbackNSW,
-NSW,NorthCoastNSW,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643756/wwia/nsw_north_coast_zzmcg2.jpg
-NSW,NewEnglandNorthWest,
+NSW,Outback NSW,
+NSW,North Coast NSW,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643756/wwia/nsw_north_coast_zzmcg2.jpg
+NSW,New England North West,
 NSW,Hunter,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643736/wwia/hunter_valley_xb7ghq.jpg
-NSW,CentralNSW,
-NSW,CentralCoast,
-NSW,CapitalCountry,
-NSW,BlueMountains,
+NSW,Central NSW,
+NSW,Central Coast,
+NSW,Capital Country,
+NSW,Blue Mountains,
 VIC,Wimmera,
-VIC,WesternGrampians,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643782/wwia/the_grampians_ojkaom.jpg
+VIC,Western Grampians,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643782/wwia/the_grampians_ojkaom.jpg
 VIC,Western,
-VIC,UpperYarra,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643775/wwia/yarra_valley_hhk1ob.jpg
-VIC,SpaCountry,
-VIC,PhillipIsland,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643754/wwia/phillip_island_ueej6j.jpg
+VIC,Upper Yarra,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643775/wwia/yarra_valley_hhk1ob.jpg
+VIC,Spa Country,
+VIC,Phillip Island,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643754/wwia/phillip_island_ueej6j.jpg
 VIC,Peninsula,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643744/wwia/mornington_peninsula_fs6bag.jpg
-VIC,MurrayEast,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643771/wwia/the_murray_ffm5r7.jpg
-VIC,MelbourneEast,
+VIC,Murray East,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643771/wwia/the_murray_ffm5r7.jpg
+VIC,Melbourne East,
 VIC,Melbourne,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643722/wwia/greater_melbourne_jmn16p.jpg
 VIC,Mallee,
 VIC,Macedon,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643716/wwia/daylesford_macedon_llzfkj.jpg
 VIC,Lakes,
-VIC,HighCountry,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643768/wwia/the_high_country_udwzpb.jpg
+VIC,High Country,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643768/wwia/the_high_country_udwzpb.jpg
 VIC,Goulburn,
 VIC,Gippsland,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643715/wwia/gippsland_ohbigm.jpg
 VIC,Geelong,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643734/wwia/great_ocean_road_metp89.jpg
-VIC,CentralMurray,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643771/wwia/the_murray_ffm5r7.jpg
-VIC,CentralHighlands,
-VIC,BendigoLoddon,
+VIC,Central Murray,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643771/wwia/the_murray_ffm5r7.jpg
+VIC,Central Highlands,
+VIC,Bendigo Loddon,
 VIC,Ballarat,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643754/wwia/goldfields_ne0hru.jpg
-TAS,WildernessWest,
-TAS,NorthWest,
-TAS,LauncestonTamarandtheNorth,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643749/wwia/launceston_and_the_north_idbg7e.jpg
-TAS,HobartandtheSouth,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643741/wwia/hobart_and_the_south_kqlwgg.jpg
-TAS,EastCoast,
-SA,YorkePeninsula,
+TAS,Wilderness West,
+TAS,North West,
+TAS,Launceston Tamar and the North,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643749/wwia/launceston_and_the_north_idbg7e.jpg
+TAS,Hobart and the South,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643741/wwia/hobart_and_the_south_kqlwgg.jpg
+TAS,East Coast,
+SA,Yorke Peninsula,
 SA,Riverland,
 SA,Murraylands,
-SA,LimestoneCoast,
-SA,KangarooIsland,
-SA,FlindersRangesandOutback,
-SA,FleurieuPeninsula,
-SA,EyrePeninsula,
-SA,ClareValley,
+SA,Limestone Coast,
+SA,Kangaroo Island,
+SA,Flinders Ranges and Outback,
+SA,Fleurieu Peninsula,
+SA,Eyre Peninsula,
+SA,Clare Valley,
 SA,Barossa,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643705/wwia/barossa_valley_x0vejh.jpg
-SA,AdelaideHills,
+SA,Adelaide Hills,
 SA,Adelaide,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643707/wwia/adelaide_uzreqi.jpg
 NT,MacDonnell,
 NT,Lasseter,
-NT,KatherineDaly,
-NT,KakaduArnkem,
+NT,Katherine Daly,
+NT,Kakadu Arnkem,
 NT,Darwin,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643706/wwia/darwin_dirruw.jpg
 NT,Barkly,
-NT,AliceSprings,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643721/wwia/alice_springs_vv8hsx.jpg
+NT,Alice Springs,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643721/wwia/alice_springs_vv8hsx.jpg
 QLD,Whitsundays,
-QLD,TropicalNorthQueensland,
-QLD,SunshineCoast,
+QLD,Tropical North Queensland,
+QLD,Sunshine Coast,
 QLD,Outback,
 QLD,Northern,
 QLD,Mackay,
-QLD,GoldCoast,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643712/wwia/gold_coast_pftzh1.jpg
-QLD,FraserCoast,
-QLD,DarlingDownds,
-QLD,CentralQueensland,
+QLD,Gold Coast,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643712/wwia/gold_coast_pftzh1.jpg
+QLD,Fraser Coast,
+QLD,Darling Downds,
+QLD,Central Queensland,
 QLD,Bundaberg,
 QLD,Brisbane,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643717/wwia/brisbane_wemqit.jpg
-WA,ExperiencePerth,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643757/wwia/perth_surrounds_kxywzw.jpg
-WA,Australia’sSouthWest,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643734/wwia/margaret_river_southwest_ljcref.jpg
-WA,Australia'sNorthWest,
-WA,Australia’sGoldenOutback,
-WA,Australia’sCoralCoast,
+WA,Experience Perth,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643757/wwia/perth_surrounds_kxywzw.jpg
+WA,Australia’s South West,https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643734/wwia/margaret_river_southwest_ljcref.jpg
+WA,Australia's North West,
+WA,Australia’s Golden Outback,
+WA,Australia’s Coral Coast,

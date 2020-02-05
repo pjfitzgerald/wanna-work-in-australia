@@ -9,7 +9,18 @@ Rails.application.routes.draw do
     resources :applications, only: [:index, :show]
   end
 
-  resources :regions, only: [:index, :show]
+  resources :regions do
+    collection do 
+      get :vic, to: "regions#vic"
+      get :nsw
+      get :qld
+      get :sa
+      get :nt
+      get :wa
+      get :tas
+      get :act
+    end
+  end
   
   resources :resources, only: [:index, :show]
 
