@@ -13,11 +13,10 @@ Resource.destroy_all
 
 
 def load_regions_from_csv
-  csv_options = { col_sep: ',', quote_char: '"', headers: :first_row, header_converters: :symbol }
+  csv_options = { col_sep: '|', quote_char: '"', headers: :first_row, header_converters: :symbol }
   file_path = 'tourism_regions.csv'
   CSV.foreach(file_path, csv_options) do |row|
-    # puts "#{row[:state]}: #{row[:region]}"
-    Region.create!(name: row[:region], state: row[:state], banner: row[:banner])
+    Region.create!(name: row[:region], state: row[:state], banner: row[:banner], description: row[:description], link: row[:link])
   end
   puts "#{Region.count} regions loaded"
 end
