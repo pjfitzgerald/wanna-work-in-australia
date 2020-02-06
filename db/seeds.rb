@@ -1,7 +1,6 @@
 
 require 'csv'
-
-
+require 'faker'
 
 
 Venue.destroy_all
@@ -28,9 +27,12 @@ load_regions_from_csv
 def seed_users
   Traveller.create!(first_name: "Pat The Tester", last_name: "Fitz", email: "test@test.com", password: "123456")
   for x in (0..10) do 
-    Traveller.create!(first_name: "Jerome#{x}", last_name: "
-      Dingus#{x}", email: "testtraveller#{x}@test.com", password: "123456")
-    VenueAdmin.create!(first_name: "Peter#{x}", last_name: "Doofus#{x}", email: "testadmin#{x}@test.com", password: "123456")
+    traveller = Traveller.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: "temp@email.com", password: "123456")
+    traveller.email = "#{traveller.first_name}.#{traveller.last_name}@testing.com"
+    traveller.save!
+    venue_admin = VenueAdmin.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: "temp@email.com", password: "123456")
+    venue_admin.email = "#{venue_admin.first_name}.#{venue_admin.last_name}@testing.com"
+    venue_admin.save!
   end
   puts "#{Traveller.count} travellers created"
   puts "#{VenueAdmin.count} venue admins created"
@@ -43,7 +45,7 @@ seed_users
 
 def seed_venues
   for x in (0..30) do
-    Venue.create!(name: "TestVenue#{x}", region: Region.order('RANDOM()').first, venue_admin: VenueAdmin.order('RANDOM()').first)
+    Venue.create!(name: Faker::Restaurant.name, description: Faker::Restaurant.description, region: Region.order('RANDOM()').first, venue_admin: VenueAdmin.order('RANDOM()').first)
   end
   puts "#{Venue.count} venues created"
 end
@@ -54,7 +56,7 @@ seed_venues
 
 def seed_jobs
   for x in (0..25) do
-    Job.create!(title: "TestTitle#{x}", venue: Venue.order('RANDOM()').first)
+    Job.create!(title: Faker::Job.title, description: "This is a test job description", venue: Venue.order('RANDOM()').first)
   end
   puts "#{Job.count} jobs created"
 end
@@ -84,8 +86,8 @@ def seed_reviews
   Application.where(status: "Accepted").each do |application|
     # puts application.traveller
     # puts application.job.venue.venue_admin
-    Review.create!(user: application.traveller, rating: (0..10).to_a.sample, content: "blah blah blah!!!", job: application.job)
-    Review.create!(user: application.job.venue.venue_admin, rating: (0..10).to_a.sample, content: "blah blah blah!!!", job: application.job)
+    Review.create!(user: application.traveller, rating: (0..10).to_a.sample, content: Faker::Lorem.sentence, job: application.job)
+    Review.create!(user: application.job.venue.venue_admin, rating: (0..10).to_a.sample, content: Faker::Lorem.sentence, job: application.job)
   end
   puts "#{Review.count} reviews created"
 end
@@ -96,9 +98,9 @@ seed_reviews
 
 
 def seed_resources
-  Resource.create!(title: "Visa Information", description: "")
-  Resource.create!(title: "Superannuation", description: "")
-  Resource.create!(title: "Driving in Australia", description: "")
+  Resource.create!(title: "Visa Information", description: Faker::Lorem.sentence)
+  Resource.create!(title: "Superannuation", description: Faker::Lorem.sentence)
+  Resource.create!(title: "Driving in Australia", description: Faker::Lorem.sentence)
   puts "#{Resource.count} resources created"
 end
 
