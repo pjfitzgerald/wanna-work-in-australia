@@ -1,33 +1,31 @@
 
 <div class="container">
-  <div class="row row-cols-3">
 
-    <%# List all regions %>
-    <% @regions.each_with_index do |region, index| %>
-      <% current_state = region.state %>
-      <% if @regions[index - 1].state != current_state %>
-        <span class="new-state"><%= region.state %></span>
-      <% end %>
+  <%# List all regions %>
+  <% @regions.each_with_index do |region, index| %>
+    <% current_state = region.state %>
+    <% if @regions[index - 1].state != current_state %>
+      <span class="new-state"><%= link_to "#{region.state}", "regions/#{region.state.downcase}" %></span>
+    <% end %>
 
-      <%= link_to region_path(region), class: "a-primary" do %>
-        <div class="region-card">
-          <% if region.banner %>
-            <%= image_tag "#{region.banner}", src: 'img not found' %>
-          <% else %>
-            <%= image_tag "wwia_logo.png", src: 'img not found' %>
-          <% end %>
-          <div class="region-card-infos">
-            <div>
-              <h2><%= region.name %></h2>
-              <br>
-              <p><%= region.description %></p>
-            </div>
+    <%= link_to region_path(region), class: "a-primary" do %>
+      <div class="region-card">
+        <% if region.banner %>
+          <%= image_tag "#{region.banner}", src: 'img not found' %>
+        <% else %>
+          <%= image_tag "wwia_logo.png", src: 'img not found' %>
+        <% end %>
+        <div class="region-card-infos">
+          <div>
+            <h2><%= region.name %></h2>
+            <br>
+            <p><%= region.description %></p>
           </div>
         </div>
+      </div>
 
-      <% end %> <%# end for link_to %>
-    <% end %>  <%# end for .each %>
-  </div>
+    <% end %> <%# end for link_to %>
+  <% end %>  <%# end for .each %>
 </div>
 
 
