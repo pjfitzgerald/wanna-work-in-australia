@@ -1,7 +1,16 @@
 
-<%= image_tag @region.banner, src: "Image not found!" %>
+<div class="region-show-banner">
+  <%= image_tag @region.banner, src: "Image not found!", style: %>
+  <div class="container">
+  
+  </div>
+</div>
 
 <div class="container">
-  <h1><%= @region.name %></h1>
-  <p><%= @region.description %></p>
+  <div class="region-container">
+    <h1><%= @region.name %></h1>
+    <p><%= @region.description %></p>
+
+    <p>More information: <%= link_to "visitcanberra.com.au", @region.link %></p>
+  </div>
 </div>
