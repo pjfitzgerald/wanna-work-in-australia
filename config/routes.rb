@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     resources :applications, only: [:index, :show]
   end
 
-  resources :regions do
+  resources :regions, only: [:index, :show] do
     collection do 
       get :vic, to: "regions#vic"
       get :nsw, to: "regions#nsw"
@@ -20,6 +20,7 @@ Rails.application.routes.draw do
       get :tas, to: "regions#tas"
       get :act, to: "regions#act"
     end
+    resources :venues, only: :index
   end
   
   resources :resources, only: [:index, :show]

@@ -1,5 +1,17 @@
 
 <div class="container">
-  <%= @venue.name %>
+  <h2><%= @venue.name %></h2>
+  <p><%= @venue.description %></p>
+  <br>
+  <br>
+  <br>
+  <h3>Current Job Listings</h3>
+  <br>
+  <% @jobs.each do |job| %>
+    <h4><%= job.title %></h4>
+    <p><%= job.description %></p>
+
+  <% end %>
 </div>
+
 

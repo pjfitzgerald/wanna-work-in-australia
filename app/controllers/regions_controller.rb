@@ -48,6 +48,8 @@ class RegionsController < ApplicationController
 
   def show
     @region = Region.find(params[:id])
+    @venues = Venue.where(region: @region)
+    # @jobs = Job.where(status: "Open", venue: @venues. )
   end
 
 

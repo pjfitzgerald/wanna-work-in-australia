@@ -5,7 +5,9 @@
   <% @regions.each_with_index do |region, index| %>
     <% current_state = region.state %>
     <% if @regions[index - 1].state != current_state %>
-      <span class="new-state"><%= link_to "#{region.state}", "regions/#{region.state.downcase}" %></span>
+      <div class="new-state">
+        <h3><%= link_to "#{region.state}", "regions/#{region.state.downcase}"%></h3>
+      </div>
     <% end %>
 
     <%= link_to region_path(region), class: "a-primary" do %>

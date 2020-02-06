@@ -1,20 +1,34 @@
 @import "show";
 
 .new-state {
-  // border-top: black 2px solid
+  text-align: center;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.new-state a {
+  color: black;
+  text-decoration: underline;
+}
+
+.new-state a:hover {
+  text-decoration: underline;
 }
 
 
 .region-card {
   overflow: hidden;
+  height: 180px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin: 15px;
+  display: flex;
+  align-items: center;
 }
 
 .region-card > img {
-  height: 200px;
-  width: 100%;
+  height: 100%;
+  width: 180px;
   object-fit: cover;
 }
 
@@ -26,10 +40,11 @@
 
 .region-card p {
   font-size: 12px;
+  line-height: 1.4;
   opacity: .7;
-  margin: 0;
+  margin-bottom: 0;
+  margin-top: 8px;
 }
-
 
 .region-card .region-card-infos {
   padding: 16px;
@@ -42,6 +57,26 @@
 a:link{
   text-decoration: none;
 }
+ 
+@media (max-width: 767px) {
+  .region-card .region-card-infos {
+    // text-align: center;
+    justify-content: center;
+    
+  }
+  
+  .region-card .region-card-infos h2 {
+    display: inline-block;
+    font-size: 32px;
+  }
+
+  .region-card .region-card-infos p {
+    display: none
+  }
+}
+
+
+
 
 
 
