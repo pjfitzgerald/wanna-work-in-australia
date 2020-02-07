@@ -61,8 +61,6 @@
 
 
 
-
-
 .applications-container {
   display: flex;
   flex-direction: column;
@@ -71,7 +69,6 @@
 }
 
 .card-application {
-  overflow: hidden;
   height: 10vh;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -129,7 +126,6 @@
 }
 
 .card-resource {
-  overflow: hidden;
   height: 10vh;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
