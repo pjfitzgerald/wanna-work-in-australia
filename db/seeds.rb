@@ -1,7 +1,6 @@
 
-require 'csv'
 require 'faker'
-
+require 'csv'
 
 Venue.destroy_all
 Region.destroy_all
@@ -11,7 +10,7 @@ User.destroy_all
 Resource.destroy_all
 
 
-def load_regions_from_csv
+def import_regions
   csv_options = { col_sep: '|', quote_char: '"', headers: :first_row, header_converters: :symbol }
   file_path = 'tourism_regions.csv'
   CSV.foreach(file_path, csv_options) do |row|
@@ -20,7 +19,7 @@ def load_regions_from_csv
   puts "#{Region.count} regions loaded"
 end
 
-load_regions_from_csv
+import_regions
 
 
 
@@ -43,14 +42,20 @@ seed_users
 
 
 
-def seed_venues
-  for x in (0..30) do
-    Venue.create!(name: Faker::Restaurant.name, description: Faker::Restaurant.description, region: Region.order('RANDOM()').first, venue_admin: VenueAdmin.order('RANDOM()').first)
+def import_venues
+  csv_options = { col_sep: '|', quote_char: '"', headers: :first_row, header_converters: :symbol }
+  file_path = 'venue_import.csv'
+  CSV.foreach(file_path, csv_options) do |row|
+    Venue.create!(name: row[:name], region_name: row[:region_name], address: row[:address], email: row[:email], link: row[:link], phone: row[:phone])
   end
+  # FAKE DATA
+  # for x in (0..30) do
+  #   Venue.create!(name: Faker::Restaurant.name, description: Faker::Restaurant.description, region: Region.order('RANDOM()').first, venue_admin: VenueAdmin.order('RANDOM()').first)
+  # end
   puts "#{Venue.count} venues created"
 end
 
-seed_venues
+import_venues
 
 
 
@@ -87,7 +92,7 @@ def seed_reviews
     # puts application.traveller
     # puts application.job.venue.venue_admin
     Review.create!(user: application.traveller, rating: (0..10).to_a.sample, content: Faker::Lorem.sentence, job: application.job)
-    Review.create!(user: application.job.venue.venue_admin, rating: (0..10).to_a.sample, content: Faker::Lorem.sentence, job: application.job)
+    # Review.create!(user: application.job.venue.venue_admin, rating: (0..10).to_a.sample, content: Faker::Lorem.sentence, job: application.job)
   end
   puts "#{Review.count} reviews created"
 end
