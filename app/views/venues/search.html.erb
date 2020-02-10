@@ -1,14 +1,8 @@
 
-<div class="container">
+<div class="search-container">
+
   <p>Search for a venue!</p>
 
-  <div class="search-form-container">
-    <%= simple_form_for @venue do |f| %>
-      <%= f.input :name %>
-      <%= f.button :submit %>
-    <% end %>
-  
-  </div>
 
   <div class="map-info-container">
     <div class="map-container">
@@ -17,6 +11,28 @@
     <div class="info-container">
     
     </div>
+  </div>
+
+
+
+
+
+
+  <div class="search-form-container">
+    <%= simple_form_for :search, urL: search_path, method: "GET", html: { class: 'form-inline' } do |f| %>
+      <%= f.input :name, input_html: { value: ""} %>
+      <%= f.submit "Search", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+
+  <div class="search-results-container">
+    <% @venues.each do |venue| %>
+      <div class="search-result-card">
+        <%= venue.name %>
+        <br>
+        <%= venue.description %>
+      </div>
+    <% end %>
   </div>
 
 </div>

@@ -2,13 +2,14 @@
 require 'faker'
 require 'csv'
 
-Venue.destroy_all
-Region.destroy_all
-Job.destroy_all
-Application.destroy_all
-User.destroy_all
-Resource.destroy_all
-
+if Rails.env.development?
+  Venue.destroy_all
+  Region.destroy_all
+  Job.destroy_all
+  Application.destroy_all
+  User.destroy_all
+  Resource.destroy_all
+end
 
 def import_regions
   csv_options = { col_sep: '|', quote_char: '"', headers: :first_row, header_converters: :symbol }
@@ -45,8 +46,10 @@ seed_users
 def import_venues
   csv_options = { col_sep: '|', quote_char: '"', headers: :first_row, header_converters: :symbol }
   file_path = 'venue_import.csv'
+  x = 1
   CSV.foreach(file_path, csv_options) do |row|
-    Venue.create!(name: row[:name], region_name: row[:region_name], address: row[:address], email: row[:email], link: row[:link], phone: row[:phone])
+    Venue.create!(name: row[:name], region_name: row[:region_name], address: row[:address], email: row[:email], link: row[:link], phone: row[:phone], description: "Test venue description... #{x}")
+    x += 1
   end
   # FAKE DATA
   # for x in (0..30) do

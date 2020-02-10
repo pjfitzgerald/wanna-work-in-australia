@@ -1,11 +1,16 @@
 class VenuesController < ApplicationController
 
-
   def search
     @user = current_user
-    @venues = Venue.all
-    @venue = Venue.first
     @regions = Region.all
+    @venues = Venue.all
+
+    @search = params["search"]
+    if @search.present?
+      @name = @search["name"]
+      @venues = Venue.where("name ILIKE? ", "%#{@name}%")
+    end
+
   end
 
   def index

@@ -1,7 +1,35 @@
 
 
+.search-container {
+  width: 100%;
+  padding-right: 50px;
+  padding-left: 50px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .search-form-container {
   display: flex;
+}
+
+.search-results-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 50vh;
+  overflow: auto;
+}
+
+.search-result-card {
+  height: 25vh;
+  width: 80%;
+  max-width: 1200px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
 }
 
 .map-info-container {
