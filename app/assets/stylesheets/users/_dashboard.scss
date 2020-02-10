@@ -12,8 +12,8 @@
 
 .cards-container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 50px;
+  padding-left: 50px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -27,12 +27,13 @@
 .card-dashboard {
   display: flex;
   flex-direction: column;
-  align-content: space-between;
+  justify-content: space-between;
   background: white;
   box-shadow: 0 0 15px rgba(94, 67, 67, 0.2);
   margin: 15px;
   padding: 10px;
-  height: 450px
+  height: 450px;
+  width: 100%;
 }
 
 .card-dashboard h2 {
@@ -50,12 +51,51 @@
 }
 
 .btn-container {
-  // justify-self: flex-end;
+  justify-self: flex-end;
 }
 
 .btn-container .btn {
   width: 100%;
 }
+
+
+
+/* ----- Media Queries ----- */
+
+
+@media (max-width: 767px) {
+  // .applications-container {
+  //   display: block;
+  // }
+  
+  // .search-container {
+  //   display: block;
+  // }
+
+  // .resources-container {
+  //   display: block;
+  // }
+
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+  
+}
+
+@media (min-width: 1200px) {
+  
+
+}
+
+
+
+
+
 
 /* ----- Applications ----- */
 

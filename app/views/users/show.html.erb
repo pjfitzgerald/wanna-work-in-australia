@@ -1,75 +1,71 @@
 
 
-<div class="container">
-  <div class="dashboard-container"><h3>Welcome back, <%= @user.first_name %>.</h3>
-    <br>
-    <%= link_to "Click here to browse Australia's tourism regions", regions_path %> <br>
-    <%= link_to "Click here to browse our exceptional venues", venues_path %> <br>
-  </div>
+<div class="dashboard-container"><h3>Welcome back, <%= @user.first_name %>.</h3>
+  <br>
+  <%= link_to "Click here to browse Australia's tourism regions", regions_path %> <br>
+  <%= link_to "Click here to browse our exceptional venues", venues_path %> <br>
 </div>
 
 
 
-<div class="container">
-  <div class="cards-container">
-    <div class="row">
+<div class="cards-container">
+  <div class="row justify-content-center">
 
-      <div class="col-sm card-dashboard">
-        <h2>Applications</h2>
-        <div class="applications-container">
-          <% @applications.each do |application| %>
-            <div class="card-application">
-              <div class="card-application-infos">
-                <%= link_to "#{application.job.title}", user_application_path(current_user, application.id) %>
-                <p><strong>Date Created: </strong><%= application.created_at.strftime("%d-%m-%Y") %></p>
-                <% if application.date_applied %>
-                  <p><strong>Date Applied: </strong> <%= application.date_applied %> </p>
-                <% end %>
-                <p><strong>Status: </strong><%= application.status %></p>
-              </div>
+    <div class="col-sm-12 col-lg-3 card-dashboard">
+      <h2>Applications</h2>
+      <div class="applications-container">
+        <% @applications.each do |application| %>
+          <div class="card-application">
+            <div class="card-application-infos">
+              <%= link_to "#{application.job.title}", user_application_path(current_user, application.id) %>
+              <p><strong>Date Created: </strong><%= application.created_at.strftime("%d-%m-%Y") %></p>
+              <% if application.date_applied %>
+                <p><strong>Date Applied: </strong> <%= application.date_applied %> </p>
+              <% end %>
+              <p><strong>Status: </strong><%= application.status %></p>
             </div>
-          <% end %>
-        </div>  
-        <div class="btn-container">
-          <%= link_to "View All Applications", user_applications_path(current_user), class: "btn btn-secondary" %>
-        </div>
-      </div>
-
-      <div class="col-sm card-dashboard"> 
-          <h2>Search</h2>
-          <div class="search-container">
-            <div class="search-infos">
-              <p>Search for your ideal work venue!</p>
-            </div>
-
           </div>
-          <div class="btn-container">
-            <%= link_to "Go!", venue_search_path, class: "btn btn-secondary" %>
-          </div>
-
-
+        <% end %>
+      </div>  
+      <div class="btn-container">
+        <%= link_to "View All Applications", user_applications_path(current_user), class: "btn btn-secondary" %>
       </div>
-
-      
-      <div class="col-sm card-dashboard"> 
-        <h2>Resources</h2>
-        <div class="resources-container">
-          <% @resources.each do |resource| %>
-            
-            <div class="card-resource">
-              <div class="card-resource-infos">
-                <%= link_to resource.title, resource_path(@resources.find_by(title: resource.title)) %>
-              </div>
-            </div>
-          
-          <% end %>
-        </div>
-        <div class="btn-container">
-          <%= link_to 'View All Resources', resources_path, class: "btn btn-secondary" %>
-        </div>
-      </div>
-      
     </div>
+
+    <div class="col-sm-12 col-lg-3 card-dashboard"> 
+        <h2>Search</h2>
+        <div class="search-container">
+          <div class="search-infos">
+            <p>Search for your ideal work venue!</p>
+          </div>
+
+        </div>
+        <div class="btn-container">
+          <%= link_to "Go!", venue_search_path, class: "btn btn-secondary" %>
+        </div>
+
+
+    </div>
+
+    
+    <div class="col-sm-12 col-lg-3 card-dashboard"> 
+      <h2>Resources</h2>
+      <div class="resources-container">
+        <% @resources.each do |resource| %>
+          
+          <div class="card-resource">
+            <div class="card-resource-infos">
+              <%= link_to resource.title, resource_path(@resources.find_by(title: resource.title)) %>
+            </div>
+          </div>
+        
+        <% end %>
+      </div>
+      <div class="btn-container">
+        <%= link_to 'View All Resources', resources_path, class: "btn btn-secondary" %>
+      </div>
+    </div>
+    
   </div>
 </div>
 
