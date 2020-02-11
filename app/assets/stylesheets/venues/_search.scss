@@ -38,13 +38,21 @@
 }
 
 .map-container {
-  height: 50vh;   // arbitrary for now
+  height: 50vh;
   width: 70%;
   float: left;
+  background-color: orange;
+  margin: 0px 5px 10px 5px;
+}
+
+#map {
+  height: 100%;
 }
 
 .info-container {
   height: 50vh;
   width: 30%;
   float: right;
+  background-color: green;
+  margin: 0px 5px 10px 5px;
 }
