@@ -1,3 +1,12 @@
+<% provide :head_tags do %>
+    <script>
+      document.addEventListener("DOMContentLoaded", function(){
+          initMap(-37.6907963,145.4061622)
+      });
+    </script>
+<% end %>
+
+
 
 <div class="search-container">
 
@@ -6,19 +15,12 @@
 
   <div class="map-info-container">
     <div class="map-container">
-      <h2>map goes here</h2>
-      <div id="map" data-maps-api-key="test1234<%= ENV['GOOGLE_MAPS_API_KEY'] %>">
-
-      </div>
+      <div id="map"></div>
     </div>
     <div class="info-container">
       <h2>venue info goes here</h2>
     </div>
   </div>
-
-
-
-
 
 
   <div class="search-form-container">

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_09_051704) do
+ActiveRecord::Schema.define(version: 2020_02_11_132009) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -83,7 +83,6 @@ ActiveRecord::Schema.define(version: 2020_02_09_051704) do
 
   create_table "venues", force: :cascade do |t|
     t.string "name"
-    t.string "coordinates"
     t.string "address"
     t.bigint "venue_admin_id"
     t.bigint "region_id"
@@ -93,6 +92,8 @@ ActiveRecord::Schema.define(version: 2020_02_09_051704) do
     t.string "link"
     t.string "phone"
     t.string "email"
+    t.decimal "latitude"
+    t.decimal "longitude"
     t.index ["region_id"], name: "index_venues_on_region_id"
   end
 

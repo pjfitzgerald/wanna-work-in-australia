@@ -24,9 +24,10 @@
     <meta name="twitter:image:src" content="<%= meta_image %>">
 
     <!-- Google Maps JS API -->
-    
+    <%= javascript_include_tag 'https://maps.googleapis.com/maps/api/js?key='+Rails.application.credentials.google_maps_api_key %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    
+    <%= yield(:head_tags) %>
 
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
