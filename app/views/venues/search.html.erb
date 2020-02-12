@@ -1,7 +1,7 @@
 <% provide :head_tags do %>
     <script>
       document.addEventListener("DOMContentLoaded", function(){
-          initMap(-37.6907963,145.4061622)
+          initMap(-37.6907963,145.4061622)  // currently centered on Stones
       });
     </script>
 <% end %>
@@ -35,7 +35,7 @@
       <div class="search-result-card">
         <%= venue.name %>
         <br>
-        <%= venue.description %>
+        <%= venue.address %>
       </div>
     <% end %>
   </div>

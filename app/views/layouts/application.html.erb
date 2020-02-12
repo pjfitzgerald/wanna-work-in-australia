@@ -23,8 +23,9 @@
     <meta name="twitter:creator" content="<%= DEFAULT_META["twitter_account"] %>">
     <meta name="twitter:image:src" content="<%= meta_image %>">
 
-    <!-- Google Maps JS API -->
-    <%= javascript_include_tag 'https://maps.googleapis.com/maps/api/js?key='+Rails.application.credentials.google_maps_api_key %>
+    <!-- Google Maps JS API (incl Places library) -->
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Rails.application.credentials.google_maps_api_key}&libraries=places" %>
+
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     <%= yield(:head_tags) %>
@@ -44,7 +45,7 @@
       <%= yield %>
     </div>  
     <%= render 'shared/footer' %>
-    <%= javascript_include_tag 'application' %>
-    <%= javascript_pack_tag 'application' %>
+    <%#= javascript_include_tag 'application' %>  <!-- commented to avoid duplication with include_tags in the head -->
+    <%#= javascript_pack_tag 'application' %>   <!-- commented to avoid duplication with include_tags in the head -->
   </body>
 </html>
