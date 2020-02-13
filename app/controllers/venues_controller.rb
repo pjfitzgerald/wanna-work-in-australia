@@ -9,13 +9,13 @@ class VenuesController < ApplicationController
 
     @venue_coords = []
 
-    @venues.each do |venue|
-      sub_array = []
-      sub_array << venue.name
-      sub_array << venue.latitude
-      sub_array << venue.longitude
-      @venue_coords << sub_array
-    end
+    # @venues.each do |venue|
+    #   sub_array = []
+    #   sub_array << venue.name
+    #   sub_array << venue.latitude
+    #   sub_array << venue.longitude
+    #   @venue_coords << sub_array
+    # end
     
     # @venue_coords = @venue_coords.to_json
 

@@ -101,7 +101,7 @@
 
 
 
-.applications-container {
+.dashboard-applications-container {
   display: flex;
   flex-direction: column;
   overflow: auto;
@@ -143,7 +143,7 @@
 /* ----- Search ----- */
 
 
-.search-container {
+.dashboard-search-container {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -158,7 +158,7 @@
 
 
 
-.resources-container {
+.dashboard-resources-container {
   display: flex;
   flex-direction: column;
   overflow: auto;

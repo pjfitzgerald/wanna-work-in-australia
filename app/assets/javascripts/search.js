@@ -20,9 +20,8 @@ const initMap = (lat, lng) => {
     }, function(results, status) {
       if (status == google.maps.GeocoderStatus.OK) {
         if (results[0]) {
-          let infoContainer = document.querySelector('.info-container')
-          // console.log(infoContainer);
-          infoContainer.innerHTML = `<h4>${results[0].formatted_address}</h4>`;
+          // add result to info-address-card inside info-container
+          document.querySelector('.info-address-card').insertAdjacentHTML('afterbegin',`<h4><strong>Address:</strong> <br> ${results[0].formatted_address}</h4>`);
         }
       }
     })
@@ -32,17 +31,14 @@ const initMap = (lat, lng) => {
 };
 
 const addMarkers = (venues) => {
-  // venues.forEach((venue) => {
-    // let venueCoords = new google.maps.Latlng(venue[1], venue[2]);
-    // let marker = new google.maps.Marker({
-    //   position: (venueCoords),
-    //   map: map,
-    //   animation: google.maps.Animation.DROP
-    // });
-    // console.log(venue);
+  venues.forEach((venue) => {
+    let venueCoords = new google.maps.Latlng(venue[1], venue[2]);
+    let marker = new google.maps.Marker({
+      position: (venueCoords),
+      map: map,
+      animation: google.maps.Animation.DROP
+    });
 
-    // console.log(typeof venues);
-    // console.log(venues);
-  // })
+  })
 
 }

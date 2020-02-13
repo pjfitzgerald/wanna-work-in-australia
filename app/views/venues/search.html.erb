@@ -1,4 +1,4 @@
-<%= content_tag 'div', '', id: 'data', data: {venue1: @venue_coords[0], venue2: @venue_coords[1]} %>
+
 
 <% provide :head_tags do %>
     <script>
@@ -17,34 +17,40 @@
 
 <div class="search-container">
 
-  <p>Search for a venue!</p>
-
+  <div class="search-form-container">
+    <%= simple_form_for :search, urL: search_path, method: "GET", html: { class: 'form-inline' } do |f| %>
+      <%= f.input :name, label: "Search for a venue here: ", input_html: {value: ""}, required: false, class: "ml-10" %>
+      <%= f.submit "Search", class: "btn btn-primary ml-2" %>
+    <% end %>
+  </div>
 
   <div class="map-info-container">
     <div class="map-container">
       <div id="map"></div>
     </div>
     <div class="info-container">
+
+
+      <div class="info-name-card"></div>
+      <div class="info-address-card"></div>
     </div>
   </div>
 
+<%# if search query submitted, display matching venues %>
 
-  <div class="search-form-container">
-    <%= simple_form_for :search, urL: search_path, method: "GET", html: { class: 'form-inline' } do |f| %>
-      <%= f.input :name, input_html: { value: ""} %>
-      <%= f.submit "Search", class: "btn btn-primary" %>
-    <% end %>
-  </div>
-
-  <div class="search-results-container">
-    <% @venues.each do |venue| %>
-      <div class="search-result-card">
-        <%= venue.name %>
-        <br>
-        <%= venue.address %>
-      </div>
-    <% end %>
-  </div>
+  <% if @search %>
+    <div class="search-results-container">
+      <% @venues.each do |venue| %>
+        <div class="search-result-card">
+          <%= venue.name %>
+          <br>
+          <%= venue.address %>
+          <br>
+          <%= link_to "View", venue_path(venue) %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
 
 </div>
 
