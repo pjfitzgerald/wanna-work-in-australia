@@ -1,7 +1,14 @@
+<%= content_tag 'div', '', id: 'data', data: {venue1: @venue_coords[0], venue2: @venue_coords[1]} %>
+
 <% provide :head_tags do %>
     <script>
-      document.addEventListener("DOMContentLoaded", function(){
-          initMap(-37.6907963,145.4061622)  // currently centered on Stones
+      const test_data = document.getElementById('data')
+      console.log(test_data);
+      // const rails_venues = "<%= @venues_coords %>";
+      // console.log(rails_venues);
+      document.addEventListener("DOMContentLoaded", () => {
+        initMap(-37.6907963,145.4061622);  
+          // addMarkers(rails_venues);
       });
     </script>
 <% end %>
@@ -18,7 +25,6 @@
       <div id="map"></div>
     </div>
     <div class="info-container">
-      <h2>venue info goes here</h2>
     </div>
   </div>
 
