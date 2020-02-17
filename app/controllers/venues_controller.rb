@@ -23,8 +23,9 @@ class VenuesController < ApplicationController
 
     @search = params["search"]
     if @search.present?
-      @name = @search["name"]
-      @venues = Venue.where("name ILIKE? ", "%#{@name}%")
+      @search_term = @search["name"]
+      # @searchable = Venue.where("name ILIKE? ", "%#{@search_term}%") + Venue.where("region ILIKE? ", "%#{@search_term}%")
+      @venues = Venue.where("name ILIKE? ", "%#{@search_term}%")
     end
 
   end

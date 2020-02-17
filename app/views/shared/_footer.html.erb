@@ -1,11 +1,26 @@
 
-<div id="footer" class="bg-dark" >
-  <div class="container">
-    <span>
-    <p><%= link_to "About Us", about_path %></p>
-    <p><%= link_to "Resources", resources_path %></p>
-    <p><%= link_to "Venues", venues_path %></p>
-    <p class="text-secondary">© 2019 Wanna Work in Australia</p>
-    </span>
+<div class="footer">
+
+  <div id="footer-social">
+      <a href="https://instagram.com">
+        <i class="fab fa-instagram fa-3x"></i>
+      </a>
+      <a href="https://twitter.com">
+        <i class="fab fa-twitter fa-3x"></i>
+      </a>
+      <a href="https://facebook.com">
+        <i class="fab fa-facebook-square fa-3x"></i>
+      </a>
   </div>
+
+  <div id="footer-links">
+      <%= link_to "About Us", about_path %>
+      <%= link_to "Resources", resources_path %>
+      <%= link_to "Venues", venues_path %>
+  </div>
+      
+  <div class="copyright-container">
+    <p>© 2019 Wanna Work in Australia</p>
+  </div>
+
 </div>
