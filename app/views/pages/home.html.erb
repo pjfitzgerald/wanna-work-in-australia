@@ -11,45 +11,52 @@
 </div>
 
 <div class="features-container">
-  <div class="left-feature-container">
-    <h2>Features</h2>
-    <br>
-    <p>cool feature 1</p> <br>
-    <p>cool feature 2</p> <br>
-    <p>cool feature 3</p> <br>
-    
-  </div>
-  <div class="right-feature-container">
-    <h2>Our Process</h2>
-    <br>
-    <p>process step 1</p> <br>
-    <p>process step 2</p> <br>
-    <p>process step 3</p> <br>
-    
-  </div>
-  <div class="small-features-container">
-    <div class="small-features">
-      <h2>Features</h2>
-      <br>
-      <p>cool feature 1</p> <br>
-      <p>cool feature 2</p> <br>
-      <p>cool feature 3</p> <br>
-    </div>
-    <div class="small-process">
-      <h2>Our Process</h2>
-      <br>
-      <p>process step 1</p> <br>
-      <p>process step 2</p> <br>
-      <p>process step 3</p> <br>      
-    </div>
-  </div>
+  <h3>Features</h3>
+  <br>
+  <div class="feature-card-1"></div>
+  <div class="feature-card-2"></div>
+  <div class="feature-card-3"></div>
+  <p>Browse our 76 tourism regions</p> <br>
+  <p>View job listings from our curated list of hospitality venues</p> <br>
+  <p>Contact venue managers directly on our platform</p> <br>
+</div>
+
+<div class="process-container">
+  <h3>The Process</h3>
+  <br>
+  <p>Find your ideal venues</p> <br>
+  <p>Reach out and send an application</p> <br>
+  <p>Track your application through your dashboard</p> <br>
 </div>
 
 
 <div class="home-resources-container">
-  <% @resources.each do |resource| %>
-    <div class="home-resource-card">
-      <h3><%= resource.title %></h3>
-    </div>
-  <% end %>
+  <h3>How to work in Australia</h3>
+  <h6>All the relevant information you'll need</h6>
+  <div class="home-resources-cards-container">
+    <% @resources.each do |resource| %>
+      <%= link_to resource_path(resource) do %>
+        <div class="home-resource-card">
+          <h5><%= resource.title %></h5>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
