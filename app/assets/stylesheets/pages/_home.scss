@@ -30,70 +30,55 @@
   margin-right: auto;
   margin-left: auto;
   background-color: $light-gray;
+  padding-bottom: 25px;
+  padding-top: 25px;
 }
 
-.features-container h2 {
-  padding: 10px;
-  
-}
-
-
-.left-feature-container {
-  width: 50%;
-  float: left;
-  min-height: 50vh;
-  padding: 30px 15px 15px 15px;
-  display: block;
-}
-
-
-.right-feature-container {
-  width: 50%;
-  float: right;
-  min-height: 50vh;
-  padding: 30px 15px 15px 15px;
-  display: block;
-}
-
-.small-features-container {
+.process-container {
   width: 100%;
-
-}
-
-.small-features-container > * {
-  border-bottom: 2px solid black;
-}
-
-.small-features-container > * > h2 {
-  margin-top: 10px;
-}
-
-.small-features {
-  min-height: 250px;
-}
-
-.small-process {
-  min-height: 250px;
+  text-align: center;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: $primary;
+  padding-bottom: 25px;
+  padding-top: 25px;
 }
 
 .home-resources-container {
-  // background-color: $secondary;
-  border-top: 2px solid red;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+
+
+.home-resources-cards-container {
   display: flex;
   flex-wrap: wrap;
+  padding: 35px;
 }
 
-.home-resource-card {
-  display: flex;
-  justify-content: space-between;
+.home-resources-cards-container a {
   background: $complementary;
   box-shadow: 0 0 15px rgba(94, 67, 67, 0.2);
-  margin: 15px;
+  margin: 5px;
   padding: 10px;
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
+  flex: 1 0 21%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
 }
 
+.home-resources-cards-container a:hover {
+  color:white;
+}
 
 
 
@@ -110,11 +95,8 @@
 
 @media (max-width: 767px) {
   .features-container { max-width: 720px; }
+  .process-container { max-width: 720px; }
 
-  .left-feature-container { display: none; }
-  .right-feature-container { display: none; }
-
-  .small-features-container { display: block; }
 }
 
 @media (min-width: 768px) {

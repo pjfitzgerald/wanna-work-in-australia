@@ -6,7 +6,7 @@
     <% current_state = region.state %>
     <% if @regions[index - 1].state != current_state %>
       <div class="new-state">
-        <h3><%#= link_to "#{region.state}", "regions/#{region.state.downcase}"%></h3>
+        <h3><%= link_to "#{region.state}", "regions/#{region.state.downcase}"%></h3>
       </div>
     <% end %>
 

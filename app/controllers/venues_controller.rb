@@ -21,13 +21,7 @@ class VenuesController < ApplicationController
 
     # raise
 
-    @search = params["search"]
-    if @search.present?
-      @search_term = @search["name"]
-      # @searchable = Venue.where("name ILIKE? ", "%#{@search_term}%") + Venue.where("region ILIKE? ", "%#{@search_term}%")
-      @venues = Venue.where("name ILIKE? ", "%#{@search_term}%")
-    end
-
+    venue_search
   end
 
   def index
@@ -40,6 +34,15 @@ class VenuesController < ApplicationController
   end
 
   private
+
+  def venue_search
+    @search = params["search"]
+    if @search.present?
+      @search_term = @search["name"]
+      # @searchable = Venue.where("name ILIKE? ", "%#{@search_term}%") + Venue.where("region ILIKE? ", "%#{@search_term}%")
+      @venues = Venue.where("name ILIKE? ", "%#{@search_term}%")
+    end
+  end
 
   def venue_params
     params.require(:venues).permit(:id)
