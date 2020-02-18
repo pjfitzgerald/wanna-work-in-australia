@@ -5,7 +5,7 @@
     <h1>WWIA helps international travellers find work in Australia</h1>
     <p>Browse jobs and apply for work in one of our beautiful tourism regions</p>
     <% if !user_signed_in? %>
-      <%= link_to "Sign Up", new_traveller_registration_path, class: "btn btn-secondary" %>
+      <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-secondary" %>
     <% end %>
   </div>
 </div>
@@ -28,8 +28,28 @@
     
   </div>
   <div class="small-features-container">
-    <div class="small-features"><h2>Features</h2></div>
-    <div class="small-process"><h2>Our Process</h2></div>
+    <div class="small-features">
+      <h2>Features</h2>
+      <br>
+      <p>cool feature 1</p> <br>
+      <p>cool feature 2</p> <br>
+      <p>cool feature 3</p> <br>
+    </div>
+    <div class="small-process">
+      <h2>Our Process</h2>
+      <br>
+      <p>process step 1</p> <br>
+      <p>process step 2</p> <br>
+      <p>process step 3</p> <br>      
+    </div>
   </div>
 </div>
 
+
+<div class="home-resources-container">
+  <% @resources.each do |resource| %>
+    <div class="home-resource-card">
+      <h3><%= resource.title %></h3>
+    </div>
+  <% end %>
+</div>

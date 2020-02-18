@@ -109,6 +109,11 @@ def seed_resources
   Resource.create!(title: "Visa Information", description: Faker::Lorem.sentence)
   Resource.create!(title: "Superannuation", description: Faker::Lorem.sentence)
   Resource.create!(title: "Driving in Australia", description: Faker::Lorem.sentence)
+  Resource.create!(title: "RSA", description: Faker::Lorem.sentence)
+  Resource.create!(title: "Work Cover", description: Faker::Lorem.sentence)
+  Resource.create!(title: "Health Insurance", description: Faker::Lorem.sentence)
+  Resource.create!(title: "Rates of Pay", description: Faker::Lorem.sentence)
+  Resource.create!(title: "Accommodation", description: Faker::Lorem.sentence)
   puts "#{Resource.count} resources created"
 end
 

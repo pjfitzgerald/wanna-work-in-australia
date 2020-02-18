@@ -2,7 +2,7 @@
 #footer-social {
   display: flex;
   justify-content: center;
-  background-color: $light-olive-green;
+  background-color: $primary;
   padding-top: 35px;
   padding-bottom: 35px;
 }
@@ -22,22 +22,19 @@
   height: 240px;
   background-color: $secondary-gray;
   padding-top: 25px;
-  padding-bottom: 25px;
+  // padding-bottom: 25px;
 }
 
 #footer-links a {
   font-weight: bold;
-  color: $light-olive-green;
+  color: $primary;
   align-self: center;
 }
 
 .copyright-container {
   border-top: solid 1px #6C757C;
   padding-top: 15px;
-}
-
-.copyright-container {
   color: $secondary-gray;
-  text-align: center;
-
+  text-align: right;
+  padding-right: 20px;
 }
