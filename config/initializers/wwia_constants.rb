@@ -1,3 +1,6 @@
+
+
+# attained through geocoding_api_calls.rb via google geocoding API
 VENUE_COORDINATES = {
   "Jetty Rd, Barwon Heads":{"lat":"-38.28393940000001","lng":"144.4942574"},
   "43-53 Nye Road, Swan Bay":{"lat":"-38.2380177","lng":"144.6367946"},

@@ -1,6 +1,3 @@
-
-# this is not 'application_controller.rb !! '
-
 class ApplicationsController < ApplicationController
   def index
     @user = User.find(current_user.id)
