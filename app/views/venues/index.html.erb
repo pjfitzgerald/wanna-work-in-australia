@@ -3,7 +3,14 @@
 
 <div class="container">
   <% @venues.each do |venue| %>
-    <%= link_to "#{venue.name}", venue_path(venue) %> <br>
-    <%= venue.address %> <br>
+    <div class="card-venue-index">
+      <%= image_tag "https://res.cloudinary.com/dkowfxwpp/image/upload/v1580625627/wwia/stones_s7spol.jpg" %>
+      <div class="card-venue-infos">
+        <h3><%= link_to "#{venue.name}", venue_path(venue) %></h3>
+        <p><%= venue.address %></p>
+        <br>
+        <p><%= venue.description %></p>
+      </div>
+    </div>
   <% end %>
 </div>

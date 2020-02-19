@@ -127,14 +127,14 @@ seed_reviews
 
 
 def seed_resources
-  Resource.create!(title: "Visa Information", description: Faker::Lorem.sentence)
-  Resource.create!(title: "Superannuation", description: Faker::Lorem.sentence)
-  Resource.create!(title: "Driving in Australia", description: Faker::Lorem.sentence)
-  Resource.create!(title: "RSA", description: Faker::Lorem.sentence)
-  Resource.create!(title: "Work Cover", description: Faker::Lorem.sentence)
-  Resource.create!(title: "Health Insurance", description: Faker::Lorem.sentence)
-  Resource.create!(title: "Rates of Pay", description: Faker::Lorem.sentence)
-  Resource.create!(title: "Accommodation", description: Faker::Lorem.sentence)
+  Resource.create!(title: "Visa Information", description: Faker::Lorem.paragraph)
+  Resource.create!(title: "Superannuation", description: Faker::Lorem.paragraph)
+  Resource.create!(title: "Driving in Australia", description: Faker::Lorem.paragraph)
+  Resource.create!(title: "RSA", description: Faker::Lorem.paragraph)
+  Resource.create!(title: "Work Cover", description: Faker::Lorem.paragraph)
+  Resource.create!(title: "Health Insurance", description: Faker::Lorem.paragraph)
+  Resource.create!(title: "Rates of Pay", description: Faker::Lorem.paragraph)
+  Resource.create!(title: "Accommodation", description: Faker::Lorem.paragraph)
   puts "#{Resource.count} resources created"
 end
 

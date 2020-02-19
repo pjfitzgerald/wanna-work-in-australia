@@ -1,17 +1,22 @@
 
 <div class="container">
-  <h2><%= @venue.name %></h2>
-  <p><%= @venue.description %></p>
-  <br>
-  <br>
-  <br>
-  <h3>Current Job Listings</h3>
-  <br>
-  <% @jobs.each do |job| %>
-    <h4><%= job.title %></h4>
-    <p><%= job.description %></p>
-
-  <% end %>
+  <div class="card-venue-show">
+    <h2><%= @venue.name %></h2>
+    <p><%= @venue.description %></p>
+    <br>
+    <br>
+    <br>
+    <div class="card-venue-jobs">
+      <h3>Current Job Listings</h3>
+      <br>
+      <% @jobs.each do |job| %>
+        <div class="card-venue-job">
+          <h4><%= job.title %></h4>
+          <p><%= job.description %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>
 
 

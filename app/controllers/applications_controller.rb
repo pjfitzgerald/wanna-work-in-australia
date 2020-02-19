@@ -16,6 +16,12 @@ class ApplicationsController < ApplicationController
     @application = Application.create!(traveller: current_user)
   end
 
+  def edit
+    # @user = current_user
+    @application = Application.find(params[:id])
+    @job = @application.job
+  end
+
   private
 
   def application_params

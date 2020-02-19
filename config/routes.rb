@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   
   get "dashboard", to: "users#show", as: :dashboard
   resources :users, except: :show do
-    resources :applications, only: [:index, :show]
+    resources :applications, only: [:index, :show, :edit]
   end
 
   resources :regions, only: [:index, :show] do
@@ -26,7 +26,7 @@ Rails.application.routes.draw do
   resources :resources, only: [:index, :show]
 
   resources :venues, only: [:index, :show] do 
-    resources :jobs, only: [:index, :show, :new, :create]
+    resources :jobs, only: [:show, :new, :create]
   end
   get "search", to: "venues#search", as: :search
 

@@ -1,10 +1,16 @@
-<h2><%= @resource.title %></h2>
-
-<%= @resource.description %>
-
 
 <div class="container">
+  <div class="card-resource-show">
+  
+    <h2><%= @resource.title %></h2>
+
+    <%= @resource.description %> <br>
 
 
-  <p>The working holiday visa (subclass 417) is a temporary travel visa offered to people (18-30 years) who wish to travel and work in Australia for up to one year. If you wish to apply for your&nbsp;<strong>first&nbsp;</strong>work travel visa, you must be outside of Australia at the time of application.&nbsp;</p>
+    <% if @resource.title == "Visa Information" %>
+      <br>
+      <p>The working holiday visa (subclass 417) is a temporary travel visa offered to people (18-30 years) who wish to travel and work in Australia for up to one year. If you wish to apply for your&nbsp;<strong>first&nbsp;</strong>work travel visa, you must be outside of Australia at the time of application.&nbsp;</p>
+    <% end %>
+
+  </div>
 </div>

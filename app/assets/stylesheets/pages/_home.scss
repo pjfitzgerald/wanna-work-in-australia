@@ -41,7 +41,7 @@
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  background-color: $primary;
+  background-color: #d3d3d3;
   padding-bottom: 25px;
   padding-top: 25px;
 }
@@ -63,8 +63,10 @@
 }
 
 .home-resources-cards-container a {
-  background: $complementary;
-  box-shadow: 0 0 15px rgba(94, 67, 67, 0.2);
+  // background: $complementary;
+  background: #d3d3d3;
+  box-shadow: 0 0 5px rgba(94, 67, 67, 0.2);
+  border: solid 1px black;
   margin: 5px;
   padding: 10px;
   height: 150px;

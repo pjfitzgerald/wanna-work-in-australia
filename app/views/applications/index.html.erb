@@ -1,5 +1,20 @@
-<% @applications.each do |application| %>
-  <h3> Job Title: <%= application.job.title %> </h3>
-  <h4> Job Description: <%= application.job.description %> </h4>
-  <p> Venue: <%= application.job.venue.name %> </p>
-<% end %>
+
+<div class="container">
+  <h1 style="text-align:center; margin-top:10px">Your Applications</h1>
+    <% @applications.each do |application| %>
+      <div class="card-application-index">
+        <div class="card-application-index-infos">
+          <h4><%= application.job.title %> @ <%= application.job.venue.name %></h4>
+          <p><strong> Job Description: </strong> <br>
+             <%= application.job.description %> </p>
+          
+          <div class="application-status-container">
+            <h5>Status: <%= application.status %></h5>
+          </div>
+          <%# if application.status == "Open" %>
+            <%#= link_to "Edit", edit_user_application_path(application), class: "btn btn-primary" %>
+          <%# end %>
+        </div>
+      </div>
+    <% end %>
+</div> 

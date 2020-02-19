@@ -1,0 +1,41 @@
+@import "show";
+
+.card-application-index {
+  height: 20vh;
+  // width: 60%;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: flex-start;
+  align-items: space-between;
+  margin: 15px;
+}
+
+// .card-application-index img {
+//   height: 100%;
+//   width: 120px;
+//   object-fit: cover;
+  
+// }
+
+
+.card-application-index p {
+  font-size: 16px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-application-index-infos {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 10px 25px;
+}
+
+.application-status-container {
+  align-self: flex-end;
+}

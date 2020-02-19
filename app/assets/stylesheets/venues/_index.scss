@@ -1,2 +1,44 @@
 @import "map";
 @import "search";
+@import "show";
+
+.card-venue-index {
+  overflow: hidden;
+  height: 180px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 15px;
+  display: flex;
+  align-items: center;
+
+}
+
+.card-venue-index > img {
+  height: 100%;
+  width: 180px;
+  object-fit: cover;
+}
+
+.card-venue-index h3 {
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-venue-index p {
+  font-size: 16px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  // margin-top: 8px;
+}
+
+.card-venue-infos {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.card-venue-infos p {
+  padding: 5px 0px;
+}
