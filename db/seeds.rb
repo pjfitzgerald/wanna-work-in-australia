@@ -127,14 +127,14 @@ seed_reviews
 
 
 def seed_resources
-  Resource.create!(title: "Visa Information", description: Faker::Lorem.paragraph)
-  Resource.create!(title: "Superannuation", description: Faker::Lorem.paragraph)
-  Resource.create!(title: "Driving in Australia", description: Faker::Lorem.paragraph)
-  Resource.create!(title: "RSA", description: Faker::Lorem.paragraph)
-  Resource.create!(title: "Work Cover", description: Faker::Lorem.paragraph)
-  Resource.create!(title: "Health Insurance", description: Faker::Lorem.paragraph)
-  Resource.create!(title: "Rates of Pay", description: Faker::Lorem.paragraph)
-  Resource.create!(title: "Accommodation", description: Faker::Lorem.paragraph)
+  Resource.create!(title: "Visa Information", description: Faker::Lorem.paragraph, banner: "https://res.cloudinary.com/dkowfxwpp/image/upload/v1582358849/wwia/resource%20banners/chefstable_x2twnq.jpg")
+  Resource.create!(title: "Superannuation", description: Faker::Lorem.paragraph, banner: "https://res.cloudinary.com/dkowfxwpp/image/upload/v1582359031/wwia/resource%20banners/pay_resource_xlq8x6.jpg")
+  Resource.create!(title: "Driving in Australia", description: Faker::Lorem.paragraph, banner: "https://res.cloudinary.com/dkowfxwpp/image/upload/v1582358819/wwia/resource%20banners/driving_resource_vqq0ct.jpg")
+  Resource.create!(title: "RSA", description: Faker::Lorem.paragraph, banner: "https://res.cloudinary.com/dkowfxwpp/image/upload/v1582358878/wwia/resource%20banners/rsa_resource_fisnwh.jpg")
+  Resource.create!(title: "Work Cover", description: Faker::Lorem.paragraph, banner: "https://res.cloudinary.com/dkowfxwpp/image/upload/v1582359006/wwia/resource%20banners/workcover_fzfln7.jpg")
+  Resource.create!(title: "Health Insurance", description: Faker::Lorem.paragraph, banner: "https://res.cloudinary.com/dkowfxwpp/image/upload/v1582359021/wwia/resource%20banners/health_resource_uuser7.jpg")
+  Resource.create!(title: "Rates of Pay", description: Faker::Lorem.paragraph, banner: "https://res.cloudinary.com/dkowfxwpp/image/upload/v1582358824/wwia/resource%20banners/finance_resource_myqdtu.jpg")
+  Resource.create!(title: "Accommodation", description: Faker::Lorem.paragraph, banner: "https://res.cloudinary.com/dkowfxwpp/image/upload/v1582358870/wwia/resource%20banners/accom_resource_uxwblv.jpg")
   puts "#{Resource.count} resources created"
 end
 
