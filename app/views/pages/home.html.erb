@@ -40,14 +40,11 @@
     <h6>All the relevant information you'll need</h6>
     <div class="home-resources-cards-container">
       <% @resources.each do |resource| %>
-        <div class="home-resource-card" 
-        style="background-image: url(<%= resource.banner %>;" >
-          <%= link_to resource_path(resource) do %>
-            <div class="home-resource-card-infos"> 
-              <h5><%= resource.title %></h5>
-            </div>
-          <% end %>
-        </div>
+        <a class="home-resource-card" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.5)) ,url(<%= resource.banner %>;" href="<%= resource_path(resource) %>">
+          <div class="home-resource-card-infos"> 
+            <h5><%= resource.title %></h5>
+          </div>
+        </a>
       <% end %>
     </div>
   </div>

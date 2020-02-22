@@ -63,9 +63,9 @@
 }
 
 .home-resource-card {
-  background: #d3d3d3;
+  background: #d3d3d3; // inline styled image is overriding this
   box-shadow: 0 0 5px rgba(94, 67, 67, 0.2);
-  border: solid 1px black;
+  // border: solid 1px black;
   margin: 5px;
   height: 200px;
   width: 200px;
@@ -73,22 +73,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  // object-fit: contain;
+  background-size: 100% 100%;
+  
 }
 
-.home-resource-card i {
-  max-width: 100%;
-  max-height: 100%;
+.home-resource-card-infos h5 {
+  font-weight: 800;
+  color: white;
 }
 
-.home-resource-card-infos {
-  color: black;
-}
+.home-resource-card:hover .home-resource-card-infos h5{
+    color: #d3d3d3;
 
-.home-resource-card-infos:hover {
-  color: #d3d3d3;
 }
-
 
 
 
