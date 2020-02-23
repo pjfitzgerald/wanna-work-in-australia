@@ -4,14 +4,14 @@ require 'csv'
 require_relative '../lib/assets/geocoding_api_calls.rb'
 
 
-if Rails.env.development?
+# if Rails.env.development?
   Venue.destroy_all
   Region.destroy_all
   Job.destroy_all
   Application.destroy_all
   User.destroy_all
   Resource.destroy_all
-end
+# end
 
 def import_regions
   csv_options = { col_sep: '|', quote_char: '"', headers: :first_row, header_converters: :symbol }
