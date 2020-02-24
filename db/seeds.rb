@@ -53,33 +53,10 @@ def import_venues
     Venue.create!(name: row[:name], region_name: row[:region_name], address: row[:address], email: row[:email], link: row[:link], phone: row[:phone], description: "Test venue description... #{x}")
     x += 1
   end
-  # FAKE DATA
-  # for x in (0..30) do
-  #   Venue.create!(name: Faker::Restaurant.name, description: Faker::Restaurant.description, region: Region.order('RANDOM()').first, venue_admin: VenueAdmin.order('RANDOM()').first)
-  # end
   puts "#{Venue.count} venues created"
 end
 
 import_venues
-
-
-
-def populate_venue_coordinate_data
-  puts "Calling google geocoding API to populate coordinates..."
-  no_addresses = 0
-  Venue.all.each do |venue|
-    if venue.address
-      venue.latitude = geocode_address_lat(venue.address)
-      venue.longitude = geocode_address_lng(venue.address)
-      venue.save!
-    else
-      no_addresses += 1
-    end
-  end
-  puts "Coordinates updated for #{Venue.count - no_addresses} venues"
-  puts "Coordinates NOT updated for #{no_addresses} venues"
-end
-
 populate_venue_coordinate_data
 
 

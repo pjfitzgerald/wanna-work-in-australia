@@ -4,6 +4,7 @@ class Venue < ApplicationRecord
   has_many :jobs, dependent: :destroy
   has_many :applications, through: :jobs
   validates :name, presence: true
+  validates :address, presence: true
 
 
   # below methods are required for importing Venues with potentially new regions
@@ -16,6 +17,15 @@ class Venue < ApplicationRecord
 
   def region_name=(name)
     self.region = Region.where(name: name).first_or_create
+  end
+
+  private
+  
+  # prints coordinates of all venues to console, primarily used to copy output to VENUE_COORDINATES constant in /config/initializers/wwia_constants.rb
+  def self.print_coordinates
+    self.all.each do |venue|
+      puts "\"" + venue.name + "\": "  + "{\"lat\": #{venue.latitude}, \"lng\": #{venue.longitude}},"
+    end
   end
 
 end
