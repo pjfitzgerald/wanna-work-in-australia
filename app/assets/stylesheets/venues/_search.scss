@@ -43,11 +43,10 @@
 }
 
 .map-info-container {
-  display: flex;
-  
+  display: flex; 
 }
 
-.map-container {
+.map-search-container {
   height: 50vh;
   width: 70%;
   float: left;
@@ -55,9 +54,6 @@
   margin: 0px 5px 10px 5px;
 }
 
-#map {
-  height: 100%;
-}
 
 .info-container {
   height: 50vh;
