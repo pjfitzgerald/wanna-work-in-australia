@@ -7,12 +7,13 @@
   padding-left: 50px;
   margin-right: auto;
   margin-left: auto;
+  margin-top: 25px
 }
 
 .search-form-container {
   display: flex;
   margin: 10px;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .search-form-container label {
@@ -44,6 +45,9 @@
 
 .map-info-container {
   display: flex; 
+  max-width: 1600px;
+  margin: 0 auto;
+  justify-content: center;
 }
 
 .map-search-container {
