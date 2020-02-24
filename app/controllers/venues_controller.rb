@@ -1,5 +1,6 @@
 class VenuesController < ApplicationController
-
+  skip_before_action :authenticate_user!
+  
   def search
     @user = current_user
     @regions = Region.all

@@ -6,7 +6,6 @@ class Venue < ApplicationRecord
   validates :name, presence: true
 
 
-
   # below methods are required for importing Venues with potentially new regions
   # see seeds.rb import_venues for where it is used
   # https://stackoverflow.com/questions/42494410/importing-csv-data-into-rails-app-using-something-other-then-the-association-i/42494714#42494714

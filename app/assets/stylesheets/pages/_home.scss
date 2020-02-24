@@ -34,6 +34,14 @@
   padding-top: 25px;
 }
 
+.features-container a {
+  color: black;
+}
+
+.features-container a:hover {
+  color: $primary;
+}
+
 .process-container {
   width: 100%;
   text-align: center;
@@ -44,6 +52,14 @@
   background-color: #d3d3d3;
   padding-bottom: 25px;
   padding-top: 25px;
+}
+
+.process-container a {
+  color: black;
+}
+
+.process-container a:hover {
+  color: $primary;
 }
 
 .home-resources-container {

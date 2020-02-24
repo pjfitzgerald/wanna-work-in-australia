@@ -12,6 +12,7 @@ gem 'cloudinary', '~> 1.9.1'
 gem 'rmagick'
 gem 'faker'
 gem 'neatjson'
+gem 'pundit'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'

@@ -1,5 +1,6 @@
 class RegionsController < ApplicationController
-
+  skip_before_action :authenticate_user!
+  
   def index
     @regions = Region.all
   end
