@@ -26,10 +26,15 @@ class VenuesController < ApplicationController
   end
 
   def index
-    @venues = Venue.all
+    # list venues for the specific region if url is /region/:id/venues
+    if params[:region_id]
+      @venues = Venue.where(region: params[:region_id])
+    else
+      @venues = Venue.all
+    end
     venue_search
   end
-
+  
   def show
     @venue = Venue.find(params[:id])
     @jobs = Job.where(venue: @venue)

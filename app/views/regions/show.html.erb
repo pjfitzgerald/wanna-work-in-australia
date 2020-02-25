@@ -8,6 +8,8 @@
 
 
       <p>More information: <%= link_to "visitcanberra.com.au", @region.link %></p>
+      <br>
+      <%= link_to "Browse venues in this region", region_venues_path(@region), class: "btn btn-secondary" %>
     </div>
   </div>
 

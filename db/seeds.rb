@@ -78,7 +78,7 @@ def seed_applications
     end
   end
   for x in (0..10) do 
-    Application.create!(status: "Accepted", traveller: Traveller.order('RANDOM()').first, job: Job.order('RANDOM()').first)
+    Application.create!(status: "Applied", date_applied: Date.current, traveller: Traveller.order('RANDOM()').first, job: Job.order('RANDOM()').first)
   end
   puts "#{Application.count} applications created"
 end
