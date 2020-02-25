@@ -1,0 +1,16 @@
+
+<div class="container">
+  <div class="card-job-show">
+    <h1><%= @job.title %></h1>
+    <h3><%= @job.description %></h3>
+
+    <%= link_to "Click here to apply for this job!", new_user_application_path(current_user), class: "btn btn-primary" %>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <%= link_to "Back to venue", venue_path(@venue), class: "btn btn-secondary" %>
+  </div>
+</div>

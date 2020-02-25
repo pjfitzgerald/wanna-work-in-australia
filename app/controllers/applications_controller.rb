@@ -10,6 +10,8 @@ class ApplicationsController < ApplicationController
 
   def new
     @application = Application.new
+    @user = current_user
+    # @job = Job.find()
   end
 
   def create

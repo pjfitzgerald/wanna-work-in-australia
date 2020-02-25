@@ -1,5 +1,12 @@
 class JobsController < ApplicationController
 
+  def show
+    @venue = Venue.find(params[:venue_id])
+    @jobs = Job.where(venue: @venue)
+    @job = Job.find(params[:id])
+    # raise
+  end
+
   def new
     @job = Job.new
     #create a form

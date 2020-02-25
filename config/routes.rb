@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   
   get "dashboard", to: "users#show", as: :dashboard
   resources :users, except: :show do
-    resources :applications, only: [:index, :show, :edit]
+    resources :applications
   end
 
   resources :regions, only: [:index, :show] do

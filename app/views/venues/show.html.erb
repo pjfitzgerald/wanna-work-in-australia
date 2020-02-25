@@ -11,7 +11,7 @@
       <br>
       <% @jobs.each do |job| %>
         <div class="card-venue-job">
-          <h4><%= job.title %></h4>
+          <h4><%= link_to job.title, venue_job_path(@venue, job) %></h4>
           <p><%= job.description %></p>
         </div>
       <% end %>
