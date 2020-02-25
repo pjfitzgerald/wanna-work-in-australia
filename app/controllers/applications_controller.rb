@@ -1,7 +1,8 @@
 class ApplicationsController < ApplicationController
   def index
-    @user = User.find(current_user.id)
+    @user = current_user
     @applications = Application.where(traveller: @user)
+    @job = Job.find(params[:job_id]) if params[:job_id] # job only assigned if url is the venue/job side
   end
 
   def show
@@ -10,10 +11,17 @@ class ApplicationsController < ApplicationController
 
   def new
     @application = Application.new
+    @user = current_user
   end
 
   def create
-    @application = Application.create!(traveller: current_user)
+    @application = Application.new(traveller: current_user, job: Job.find(params[:job_id]))
+    if @application.save
+      redirect_to user_applications_path(current_user)
+    else
+      render :new
+      flash[:notice] = "Something went wrong!"
+    end
   end
 
   def edit

@@ -1,7 +1,6 @@
 
-<%= simple_form_for @user do |f| %>
-  <%= f.input %>
-  <%= f.input %>
-  <%= f.input %>
-  <%= f.button :submit %>
+<%= simple_form_for [@user, @application], url: venue_job_applications_path do |f| %>
+  <%= f.input :status %>
+
+  <%= f.button :submit, class: "btn btn-secondary" %>
 <% end %>

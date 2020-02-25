@@ -1,10 +1,9 @@
 class JobsController < ApplicationController
+  skip_before_action :authenticate_user!
 
   def show
     @venue = Venue.find(params[:venue_id])
-    @jobs = Job.where(venue: @venue)
     @job = Job.find(params[:id])
-    # raise
   end
 
   def new
