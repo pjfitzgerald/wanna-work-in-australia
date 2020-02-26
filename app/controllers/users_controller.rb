@@ -5,7 +5,6 @@ class UsersController < ApplicationController
     @user = current_user
     @applications = Application.where(traveller: current_user)
     @resources = Resource.all
-    # raise
 
 
     # case

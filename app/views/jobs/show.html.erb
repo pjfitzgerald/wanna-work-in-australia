@@ -4,10 +4,16 @@
     <h1><%= @job.title %></h1>
     <h3><%= @job.description %></h3>
 
+    <%# check if user is logged in %>
     <% if user_signed_in? %>
-      <%= link_to "Click here to apply for this job", new_venue_job_application_path(@venue, @job), class: "btn btn-primary" %>
+      <%# check if user has already applied for this job %>
+      <% if @application %>
+        <%= link_to "You've already applied! Click here to check on the status of your application", user_application_path(@application), class: "btn btn-primary" %>
+      <% else %>
+        <%= link_to "Click here to apply for this job", new_venue_job_application_path(@venue, @job), class: "btn btn-primary" %>
+      <% end %>
     <% else %>
-      <%= link_to "Sign up to apply for this job", new_user_registration_path, class: "btn btn-primary" %>
+      <%= link_to "Sign up or sign in to apply for this job", new_user_registration_path, class: "btn btn-primary" %>
     <% end %>
 
     <br>

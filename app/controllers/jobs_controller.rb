@@ -4,6 +4,7 @@ class JobsController < ApplicationController
   def show
     @venue = Venue.find(params[:venue_id])
     @job = Job.find(params[:id])
+    @application = Application.find_by(job: @job, traveller: current_user)
   end
 
   def new

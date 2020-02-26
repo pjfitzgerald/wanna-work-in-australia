@@ -1,6 +1,10 @@
 
-<%= @application.job.venue.name %>
-<br>
-<%= @application.job.title %>
-<br>
-<%= @application.job.description %>
+<div class="container">
+  Venue: <%= @application.job.venue.name %>
+  <br>
+  Job Title: <%= @application.job.title %>
+  <br>
+  Job Description: <%= @application.job.description %>
+  <br>
+  Application Status: <%= @application.status %>
+</div>

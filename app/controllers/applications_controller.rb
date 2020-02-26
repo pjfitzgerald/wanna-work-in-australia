@@ -6,7 +6,7 @@ class ApplicationsController < ApplicationController
   end
 
   def show
-    @application = Application.find(params[:id])
+    @application = Application.find_by(traveller: current_user, job: params[:id])
   end
 
   def new
@@ -15,7 +15,7 @@ class ApplicationsController < ApplicationController
   end
 
   def create
-    @application = Application.new(traveller: current_user, job: Job.find(params[:job_id]))
+    @application = Application.new(traveller: current_user, job: Job.find(params[:job_id], status: "Submitted")) # add content of the application to this creation from the params
     if @application.save
       redirect_to user_applications_path(current_user)
     else
@@ -25,7 +25,6 @@ class ApplicationsController < ApplicationController
   end
 
   def edit
-    # @user = current_user
     @application = Application.find(params[:id])
     @job = @application.job
   end

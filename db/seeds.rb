@@ -70,22 +70,22 @@ end
 seed_jobs
 
 
-def seed_applications
-  Traveller.all.each do |traveller|
-    for x in (1..2) do 
-      Application.create!(status: "Open", traveller: traveller, job: Job.order('RANDOM()').first)
-      # for each traveller: create 2 applications for random jobs
-    end
-  end
-  for x in (0..10) do 
-    Application.create!(status: "Applied", date_applied: Date.current, traveller: Traveller.order('RANDOM()').first, job: Job.order('RANDOM()').first)
-  end
-  puts "#{Application.count} applications created"
-end
+# def seed_applications
+#   Traveller.all.each do |traveller|
+#     for x in (1..2) do 
+#       Application.create!(status: "Open", traveller: traveller, job: Job.order('RANDOM()').first)
+#       # for each traveller: create 2 applications for random jobs
+#     end
+#   end
+#   for x in (0..10) do 
+#     Application.create!(status: "Applied", date_applied: Date.current, traveller: Traveller.order('RANDOM()').first, job: Job.order('RANDOM()').first)
+#   end
+#   puts "#{Application.count} applications created"
+# end
 
-seed_applications
+# seed_applications
 
-
+### application seeding currently unnecessary
 
 
 def seed_reviews
