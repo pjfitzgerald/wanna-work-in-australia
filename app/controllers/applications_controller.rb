@@ -6,7 +6,11 @@ class ApplicationsController < ApplicationController
   end
 
   def show
-    @application = Application.find_by(traveller: current_user, job: params[:id])
+    if params[:job_id]
+      @application = Application.find_by(traveller: current_user, job: params[:id])
+    # else
+      # @application = Application.find_by(traveller: current_user, job)
+    end
   end
 
   def new
@@ -15,7 +19,7 @@ class ApplicationsController < ApplicationController
   end
 
   def create
-    @application = Application.new(traveller: current_user, job: Job.find(params[:job_id], status: "Submitted")) # add content of the application to this creation from the params
+    @application = Application.new(traveller: current_user, job: Job.find(params[:job_id]), status: "Submitted") # add content of the application to this creation from the params
     if @application.save
       redirect_to user_applications_path(current_user)
     else
@@ -32,7 +36,7 @@ class ApplicationsController < ApplicationController
   private
 
   def application_params
-    params.require(:application).permit(:traveller_id)
+    params.require(:application).permit(:traveller_id, :resume)
   end
   
 end

@@ -4,7 +4,9 @@
     <% @applications.each do |application| %>
       <div class="card-application-index">
         <div class="card-application-index-infos">
+
           <h4><%= application.job.title %> @ <%= application.job.venue.name %></h4>
+          
           <p><strong> Job Description: </strong> <br>
              <%= application.job.description %> </p>
           
@@ -20,3 +22,5 @@
       </div>
     <% end %>
 </div> 
+
+          <!-- <h4><%#= link_to "#{application.job.title} @ #{application.job.venue.name}", user_application_path(application)%></h4> -->
