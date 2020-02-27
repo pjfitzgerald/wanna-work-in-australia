@@ -19,12 +19,24 @@ class ApplicationsController < ApplicationController
   end
 
   def create
-    @application = Application.new(traveller: current_user, job: Job.find(params[:job_id]), status: "Submitted") # add content of the application to this creation from the params
-    if @application.save
-      redirect_to user_applications_path(current_user)
-    else
+    @application = Application.new(application_params)
+    @application.traveller = current_user
+    @application.job_id = params[:job_id]
+    @application.status = "Submitted"
+    # check for existing application
+    if Application.find_by(traveller: current_user, job_id: params[:job_id])
       render :new
-      flash[:notice] = "Something went wrong!"
+      flash[:alert] = "You have already applied for this job!"
+    else
+      if @application.save!
+        redirect_to user_applications_path(current_user)
+
+        # implement mailer to send copy to venue / VA
+
+      else
+        render :new
+        flash[:notice] = "Something went wrong!"
+      end
     end
   end
 
@@ -36,7 +48,7 @@ class ApplicationsController < ApplicationController
   private
 
   def application_params
-    params.require(:application).permit(:traveller_id, :resume)
+    params.require(:application).permit(:length_of_stay, :country_of_origin, :resume)
   end
   
 end

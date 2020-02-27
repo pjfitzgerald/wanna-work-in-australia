@@ -32,9 +32,11 @@ def seed_users
     traveller = Traveller.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: "temp@email.com", password: "123456")
     traveller.email = "#{traveller.first_name}.#{traveller.last_name}@testing.com"
     traveller.save!
-    venue_admin = VenueAdmin.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: "temp@email.com", password: "123456")
-    venue_admin.email = "#{venue_admin.first_name}.#{venue_admin.last_name}@testing.com"
-    venue_admin.save!
+
+    ### commented VA creation to make traveller testing easier
+    # venue_admin = VenueAdmin.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: "temp@email.com", password: "123456")
+    # venue_admin.email = "#{venue_admin.first_name}.#{venue_admin.last_name}@testing.com"
+    # venue_admin.save!
   end
   puts "#{Traveller.count} travellers created"
   puts "#{VenueAdmin.count} venue admins created"
