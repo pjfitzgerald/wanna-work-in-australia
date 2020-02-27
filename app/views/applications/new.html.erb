@@ -2,11 +2,14 @@
 
 
 <div class="container">
-  <%= simple_form_for [@user, @application], url: venue_job_applications_path do |f| %>
-    <%= f.input :status %>
-    <%= f.label :resume %>
-    <%= f.file_field :resume %>
-
-    <%= f.button :submit, class: "btn btn-secondary" %>
-  <% end %>
+  <div class="new-application-container">
+    <%= simple_form_for [@user, @application], url: venue_job_applications_path do |f| %>
+      <%= f.input :length_of_stay, collection: ["Less than 6 months", "6 months", "1 year", "18 months", "2 years", "More than 2 years"], label: "Approximate length of stay" %>
+      <%= f.input :country_of_origin, as: :country %>
+      <br>
+      <%= f.input :resume, as: :file, label: "Upload your resume here" %>
+      <br>
+      <%= f.button :submit, class: "btn btn-secondary" %>
+    <% end %>
+  </div>
 </div>
