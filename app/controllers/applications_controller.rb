@@ -1,7 +1,6 @@
 class ApplicationsController < ApplicationController
   def index
-    @user = current_user
-    @applications = Application.where(traveller: @user)
+    @applications = Application.where(traveller: current_user)
     @job = Job.find(params[:job_id]) if params[:job_id] # job only assigned if url is the venue/job side
   end
 
@@ -11,6 +10,8 @@ class ApplicationsController < ApplicationController
     # else
       # @application = Application.find_by(traveller: current_user, job)
     end
+
+    @application = Application.find(params[:id])
   end
 
   def new

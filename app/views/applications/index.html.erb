@@ -13,6 +13,8 @@
           <div class="application-status-container">
             <h5>Status: <%= application.status %></h5>
           </div>
+
+          <%= link_to "View Application", user_application_path(current_user, application) %>
           
           <%# if application.status == "Open" %>
             <%#= link_to "Edit", edit_user_application_path(application), class: "btn btn-primary" %>
@@ -22,5 +24,3 @@
       </div>
     <% end %>
 </div> 
-
-          <!-- <h4><%#= link_to "#{application.job.title} @ #{application.job.venue.name}", user_application_path(application)%></h4> -->
