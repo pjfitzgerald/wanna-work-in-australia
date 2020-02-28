@@ -7,6 +7,9 @@
   Job Description: <%= @application.job.description %>
   <br>
   Application Status: <%= @application.status %>
+  <br>
+  <%= link_to "Download resume", @application.resume, disposition: "attachment" %>
 
-  <%= link_to "View resunme", @application.resume %>
+  <%# below preview currently not behaving correctly, currently same as above %>
+  <%#= link_to "View resume", @application.resume, disposition: "preview" %>
 </div>
