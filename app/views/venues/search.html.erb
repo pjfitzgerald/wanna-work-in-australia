@@ -1,18 +1,13 @@
 
 
+
 <% provide :head_tags do %>
-    <script>
-      const test_data = document.getElementById('data')
-      console.log(test_data);
-      // const rails_venues = "<%= @venues_coords %>";
-      // console.log(rails_venues);
+    <script>      
       document.addEventListener("DOMContentLoaded", () => {
         initMap(-37.6907963,145.4061622, 8);  
-          // addMarkers(rails_venues);
       });
     </script>
 <% end %>
-
 
 
 <div class="search-container">

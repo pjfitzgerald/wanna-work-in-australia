@@ -14,6 +14,7 @@ gem 'faker'
 gem 'neatjson'
 gem 'pundit'
 gem "aws-sdk-s3", require: false
+gem "gon"
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'

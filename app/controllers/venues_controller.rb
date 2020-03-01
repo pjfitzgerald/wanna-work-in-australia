@@ -5,23 +5,15 @@ class VenuesController < ApplicationController
     @user = current_user
     @regions = Region.all
     @venues = Venue.all
-    # @venues_json = @venues.to_json
-    # raise
-
     @venue_coords = []
-
-    # @venues.each do |venue|
-    #   sub_array = []
-    #   sub_array << venue.name
-    #   sub_array << venue.latitude
-    #   sub_array << venue.longitude
-    #   @venue_coords << sub_array
-    # end
-    
-    # @venue_coords = @venue_coords.to_json
-
-    # raise
-
+    @venues.each do |venue|
+      sub_hash = {}
+      sub_hash["name"] = venue.name
+      sub_hash["latitude"] = venue.latitude
+      sub_hash["longitude"] = venue.longitude
+      @venue_coords << sub_hash
+    end
+    gon.venues = Venue.all
     venue_search
   end
 

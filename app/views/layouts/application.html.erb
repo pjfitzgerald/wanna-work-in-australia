@@ -23,6 +23,10 @@
     <meta name="twitter:creator" content="<%= DEFAULT_META["twitter_account"] %>">
     <meta name="twitter:image:src" content="<%= meta_image %>">
 
+    <%= include_gon %>
+
+
+
     <!-- Google Maps JS API (incl Places library) -->
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Rails.application.credentials.google_maps_api_key}&libraries=places" %>
 
@@ -36,6 +40,7 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
     
     <%= favicon_link_tag asset_path('favicon.ico') %>
+
 
   </head>
   <body>
