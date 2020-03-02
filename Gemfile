@@ -15,6 +15,7 @@ gem 'neatjson'
 gem 'pundit'
 gem "aws-sdk-s3", require: false
 gem "gon"
+gem 'sendgrid-ruby'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'

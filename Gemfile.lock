@@ -200,6 +200,7 @@ GEM
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
     rmagick (4.0.0)
+    ruby_http_client (3.4.3)
     sassc (2.2.1)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
@@ -208,6 +209,8 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    sendgrid-ruby (6.1.0)
+      ruby_http_client (~> 3.4.0)
     simple_form (5.0.1)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
@@ -277,6 +280,7 @@ DEPENDENCIES
   redis
   rmagick
   sassc-rails
+  sendgrid-ruby
   simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
