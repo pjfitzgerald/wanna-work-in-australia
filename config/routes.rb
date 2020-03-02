@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get "about", to: "pages#about", as: :about
   
   get "dashboard", to: "users#show", as: :dashboard
+  patch "dashboard", to: "users#show", as: :dashboard_update
   resources :users, except: :show do
     resources :applications, only: [:index, :show]
   end

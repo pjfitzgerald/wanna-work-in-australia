@@ -1,15 +1,16 @@
 
 <div class="container">
-  Venue: <%= @application.job.venue.name %>
-  <br>
-  Job Title: <%= @application.job.title %>
-  <br>
-  Job Description: <%= @application.job.description %>
-  <br>
-  Application Status: <%= @application.status %>
-  <br>
-  <%= link_to "Download resume", @application.resume, disposition: "attachment" %>
+  <div class="app-show-card">
+    <h2>Application: <%= @application.status %></h2>
+    <strong>Venue: </strong><%= @application.job.venue.name %>
+    <br>
+    <strong>Job Title: </strong><%= @application.job.title %>
+    <br>
+    <strong>Job Description: </strong><%= @application.job.description %>
+    <br>
+    <%= link_to "Download resume", @application.resume, disposition: "attachment" %>
 
-  <%# below preview currently not behaving correctly, currently same as above %>
-  <%#= link_to "View resume", @application.resume, disposition: "preview" %>
+    <%# below preview currently not behaving correctly, currently same as above %>
+    <%#= link_to "View resume", @application.resume, disposition: "preview" %>
+  </div>
 </div>

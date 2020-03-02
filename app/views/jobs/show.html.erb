@@ -3,7 +3,6 @@
   <div class="card-job-show">
     <h1><%= @job.title %></h1>
     <h3><%= @job.description %></h3>
-
     <%# check if user is logged in %>
     <% if user_signed_in? %>
       <%# check if user has already applied for this job %>

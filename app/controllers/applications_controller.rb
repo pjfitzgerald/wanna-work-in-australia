@@ -5,13 +5,7 @@ class ApplicationsController < ApplicationController
   end
 
   def show
-    if params[:job_id]
-      @application = Application.find_by(traveller: current_user, job: params[:id])
-    # else
-      # @application = Application.find_by(traveller: current_user, job)
-    end
-
-    @application = Application.find(params[:id])
+    @application = Application.find_by(traveller: current_user, job: params[:id])
   end
 
   def new
