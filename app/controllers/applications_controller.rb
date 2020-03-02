@@ -5,7 +5,11 @@ class ApplicationsController < ApplicationController
   end
 
   def show
-    @application = Application.find_by(traveller: current_user, job: params[:id])
+    if params[:job_id]  # for when we are on the venue/job/applications route
+      @application = Application.find_by(traveller: current_user, job: params[:id])
+    else  # for when we are on the user/applications route
+      @application = Application.find(params[:id])
+    end
   end
 
   def new
@@ -27,11 +31,11 @@ class ApplicationsController < ApplicationController
       flash[:alert] = "You have already applied for this job!"
     else
       if @application.save!
+        redirect_to user_applications_path(current_user)
         # mailer to send application to venue / VA, AND to traveller for confirmation
         ApplicationsMailer.application_submission(@user, @venue)
         # decide if the above layout makes sense to send to both the venue and the traveller as a copy, otherwise will need to add additional method in mailer
         
-        redirect_to user_applications_path(current_user)
         flash[:notice] = "Congratulations, your application has been submitted."
 
 
