@@ -9,5 +9,4 @@ class AccountMailerPreview < ActionMailer::Preview
   # def deliver_later
   #  Devise::Mailer.delay(queue: 'my_queue').send(...)
   # end
-  
 end
