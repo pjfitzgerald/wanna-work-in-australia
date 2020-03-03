@@ -8,7 +8,9 @@
     <br>
     <strong>Job Description: </strong><%= @application.job.description %>
     <br>
-    <%= link_to "Download resume", @application.resume, disposition: "attachment" %>
+    <% if @application.resume.attached? %>
+      <%= link_to "Download resume", @application.resume, disposition: "attachment" %>
+    <% end %>
 
     <%# below preview currently not behaving correctly, currently same as above %>
     <%#= link_to "View resume", @application.resume, disposition: "preview" %>

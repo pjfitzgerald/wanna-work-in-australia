@@ -14,7 +14,7 @@
       <%= f.input :length_of_stay, collection: ["Less than 6 months", "6 months", "1 year", "18 months", "2 years", "More than 2 years"], label: "Approximate length of stay", required: true %>
       <%= f.input :country_of_origin, as: :country, required: true %>
       <br>
-      <%= f.input :resume, as: :file, label: "Upload your resume here (this is optional but highly recommended)" %>
+      <%= f.input :resume, as: :file, label: "Upload your resume here", required: true %>
       <br>
       <%= f.button :submit, "Submit Application", class: "btn btn-secondary" %>
     <% end %>
