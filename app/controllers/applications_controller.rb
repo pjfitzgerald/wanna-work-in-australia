@@ -37,6 +37,9 @@ class ApplicationsController < ApplicationController
       elsif params[:application][:country_of_origin].empty?
         render :new
         flash[:notice] = "Please select your country of origin!"
+      elsif !@application.resume.attached?
+        render :new
+        flash[:notice] = "Make sure you upload your resume!"
       else
         if @application.save!
           redirect_to user_applications_path(current_user)
