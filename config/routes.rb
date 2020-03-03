@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   
   get "dashboard", to: "users#show", as: :dashboard
   patch "dashboard", to: "users#show", as: :dashboard_update
+  get "settings", to: "users#settings", as: :settings
   resources :users, except: :show do
     resources :applications, only: [:index, :show]
   end
