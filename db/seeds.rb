@@ -25,26 +25,26 @@ end
 import_regions
 
 
+if Rails.env.development?
+  def seed_users
+    Traveller.create!(first_name: "Pat The Tester", last_name: "Fitz", email: "test@test.com", password: "123456")
+    for x in (0..10) do 
+      traveller = Traveller.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: "temp@email.com", password: "123456")
+      traveller.email = "#{traveller.first_name}.#{traveller.last_name}@testing.com"
+      traveller.save!
 
-def seed_users
-  Traveller.create!(first_name: "Pat The Tester", last_name: "Fitz", email: "test@test.com", password: "123456")
-  for x in (0..10) do 
-    traveller = Traveller.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: "temp@email.com", password: "123456")
-    traveller.email = "#{traveller.first_name}.#{traveller.last_name}@testing.com"
-    traveller.save!
-
-    ### commented VA creation to make traveller testing easier
-    # venue_admin = VenueAdmin.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: "temp@email.com", password: "123456")
-    # venue_admin.email = "#{venue_admin.first_name}.#{venue_admin.last_name}@testing.com"
-    # venue_admin.save!
+      ### commented VA creation to make traveller testing easier
+      # venue_admin = VenueAdmin.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: "temp@email.com", password: "123456")
+      # venue_admin.email = "#{venue_admin.first_name}.#{venue_admin.last_name}@testing.com"
+      # venue_admin.save!
+    end
+    puts "#{Traveller.count} travellers created"
+    puts "#{VenueAdmin.count} venue admins created"
+    puts "#{User.count} total users created"
   end
-  puts "#{Traveller.count} travellers created"
-  puts "#{VenueAdmin.count} venue admins created"
-  puts "#{User.count} total users created"
+
+  seed_users
 end
-
-seed_users
-
 
 
 def import_venues
