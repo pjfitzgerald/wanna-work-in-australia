@@ -7,7 +7,7 @@
     <% if user_signed_in? %>
       <%# check if user has already applied for this job %>
       <% if @application %>
-        <%= link_to "You've already applied! Click here to check on the status of your application", user_application_path(@application), class: "btn btn-primary" %>
+        <%= link_to "You've already applied! Click here to check on the status of your application", user_application_path(current_user, @application), class: "btn btn-primary" %>
       <% else %>
         <%= link_to "Click here to apply for this job", new_venue_job_application_path(@venue, @job), class: "btn btn-primary" %>
       <% end %>
