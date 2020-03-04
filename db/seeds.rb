@@ -52,7 +52,7 @@ def import_venues
   file_path = 'venue_import.csv'
   x = 1
   CSV.foreach(file_path, csv_options) do |row|
-    Venue.create!(name: row[:name], region_name: row[:region_name], address: row[:address], email: row[:email], link: row[:link], phone: row[:phone], description: Faker::Lorem.paragraph(sentence_count: 25))
+    Venue.create!(name: row[:name], region_name: row[:region_name], address: row[:address], suburb: row[:suburb], email: row[:email], link: row[:link], phone: row[:phone], description: Faker::Lorem.paragraph(sentence_count: 25))
     x += 1
   end
   puts "#{Venue.count} venues created"
