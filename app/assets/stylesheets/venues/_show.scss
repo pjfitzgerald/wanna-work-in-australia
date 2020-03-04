@@ -1,8 +1,8 @@
 
 .card-venue-show {
   height: 100vh;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  // background: white;
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   flex-direction: column;
   // align-items: center;
@@ -10,24 +10,27 @@
   padding: 25px 15px;
 }
 
-.card-venue-show h2, .card-venue-show p {
+.card-venue-show h2 {
   margin-bottom: 20px;
-  align-self: center;
+  font-weight: bold;
 }
 
+
 .card-venue-jobs {
-  border-top: solid 1px black;
+  // border-top: solid 1px black;
   display: flex;
   flex-direction: column;
 }
 
 .card-venue-jobs h3 {
   margin-top: 10px;
-  align-self: center;
+  // align-self: center;
 }
 
 .card-venue-job {
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  align-self: center;
+  width: 100%;
+  border-bottom: solid 1px grey;
   margin: 5px;
   padding: 5px;
 }

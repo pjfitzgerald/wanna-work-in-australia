@@ -7,6 +7,15 @@
   margin-bottom: 25px;
 }
 
+.venues-cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.venues-cards-container > div {
+  margin: 10px;
+}
+
 .card-venue-index {
   overflow: hidden;
   height: 250px;
