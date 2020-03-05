@@ -7,11 +7,11 @@
     <div class="venues-cards-container">
       <% @venues.each do |venue| %>
           <div class="card-venue-index" data-aos="fade-in">
-            <%= image_tag "https://res.cloudinary.com/dkowfxwpp/image/upload/v1580625627/wwia/stones_s7spol.jpg" %>
+            <%= image_tag venue.banner %>
             <div class="card-venue-infos">
               <div class="venue-infos">
                 <h4><%= link_to "#{venue.name}", venue_path(venue) %></h4>
-                <p><%= venue.address %></p>
+                <p><%= venue.suburb %></p>
               </div>
               <div class="open-job-listings">
                 <% if !Job.where(venue: venue).empty? %>
