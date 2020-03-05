@@ -29,7 +29,7 @@ class VenuesController < ApplicationController
   
   def show
     @venue = Venue.find(params[:id])
-    @jobs = Job.where(venue: @venue)
+    @jobs = Job.where(venue: @venue) if Job.where(venue: @venue) != [] 
   end
 
   private

@@ -1,4 +1,6 @@
 
+<div class="venue-show-banner" style="background-image: url(<%= @venue.banner %>);"></div>
+
 <div class="container">
   <div class="card-venue-show">
     <h2><%= @venue.name %></h2>
@@ -7,14 +9,16 @@
     <br>
     <br>
     <div class="card-venue-jobs">
-      <div><h3>Current Job Listings</h3></div>
-      <br>
-      <% @jobs.each do |job| %>
-        <div class="card-venue-job">
-          <h4><%= link_to job.title, venue_job_path(@venue, job) %></h4>
-          <p><%= job.description %></p>
-        </div>
+      <% if @jobs %>
+        <div><h3>Current Job Listings</h3></div>
+        <% @jobs.each do |job| %>
+          <div class="card-venue-job">
+            <h4><%= link_to job.title, venue_job_path(@venue, job) %></h4>
+            <p><%= job.description %></p>
+          </div>
+        <% end %>
       <% end %>
+      <br>
     </div>
   </div>
 </div>
