@@ -10,9 +10,10 @@ Rails.application.configure do
     :address => 'smtp.sendgrid.net',
     :port => 465,
     :authentication => :plain,
-    :enable_starttls_auto => true
-}
+    :enable_starttls_auto => true,
+    :tls => :true
 
+}
 
   # Code is not reloaded between requests.
   config.cache_classes = true
