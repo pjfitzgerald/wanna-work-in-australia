@@ -3,6 +3,16 @@ Rails.application.configure do
   
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_url_options = { host: "http://wwia.herokuapp.com" }
+  ActionMailer::Base.smtp_settings = {
+    :user_name => "#{Rails.application.credentials.sendgrid[:username]}",
+    :password => "#{Rails.application.credentials.sendgrid[:password]}",
+    :domain => 'yourdomain.com',
+    :address => 'smtp.sendgrid.net',
+    :port => 465,
+    :authentication => :plain,
+    :enable_starttls_auto => true
+}
+
 
   # Code is not reloaded between requests.
   config.cache_classes = true
