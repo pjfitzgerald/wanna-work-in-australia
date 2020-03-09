@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { confirmations: 'confirmations', registrations: 'users/registrations' }
+  devise_for :users, controllers: { confirmations: 'confirmations' }
 
   root to: 'pages#home'
   get "about", to: "pages#about", as: :about
