@@ -38,7 +38,7 @@ function initMap(lat, lng, initialZoom, venues) {
     })
   }
 
-  addMarkers(gon.venues);
+  addMarkers(gon.venues); // retrieves var through gon from VenuesController
 
 };
 
