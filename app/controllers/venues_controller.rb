@@ -14,6 +14,7 @@ class VenuesController < ApplicationController
       @venue_coords << sub_hash
     end
     gon.venues = Venue.all
+    
     venue_search
   end
 

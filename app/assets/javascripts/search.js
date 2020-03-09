@@ -43,9 +43,10 @@ function initMap(lat, lng, initialZoom, venues) {
         map.setCenter(marker.getPosition());
         document.querySelector('.info-address-card').innerHTML = 
         `<h3><strong>${venue.name}</strong></h3> <br>
-        <h4><strong>Address:</strong> ${venue.address}</h4> <br>
-        <h4><strong>Phone:</strong> ${venue.phone}</h4> <br>
-        <h4><strong>Email:</strong> ${venue.email}</h4> <br>
+        <h4><strong>Address:<br></strong> ${venue.address}</h4> <br>
+        <h4><strong>Phone:<br></strong> ${venue.phone}</h4> <br>
+        <h4><strong>Email:<br></strong> ${venue.email}</h4> <br>
+        <h4> <a style='position: absolute; bottom: 10px;' href='venues/${venue.id}'>Venue Details</a></h4>
         `;
       })
     })
