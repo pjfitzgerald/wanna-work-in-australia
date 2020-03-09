@@ -10,6 +10,12 @@
                 required: true,
                 autofocus: true,
                 input_html: { autocomplete: "email" }%>
+    <%= f.input :first_name,
+                required: true,
+                input_html: { autocomplete: "first-name" } %>
+    <%= f.input :last_name,
+                required: true,
+                input_html: { autocomplete: "last-name" } %>
     <%= f.input :password,
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
@@ -17,17 +23,10 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
+    <%= f.input :terms,
+                required: true,
+                label: "I Agree to the terms and conditions" %>
   </div>
-
-  <%#   
-  <div class="form-check mb-2">
-    <input class="form-check-input" type="radio" name="userType" id="traveller" value="traveller" checked>
-    <label class="form-check-label radio-inline" for="traveller">Traveller</label>
-  </div>
-  <div class="form-check mb-2">
-    <input class="form-check-input" type="radio" name="userType" id="venue_admin" value="venue_admin">
-    <label class="form-check-label radio-inline" for="venue_admin">Venue Administrator</label>
-  </div> %>
 
   <div class="form-actions btn btn-primary mb-2">
       <%= f.button :submit, "Sign up" %>
