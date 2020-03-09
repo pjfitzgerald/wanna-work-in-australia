@@ -33,8 +33,21 @@ function initMap(lat, lng, initialZoom, venues) {
       let marker = new google.maps.Marker({
         position: (venueCoords),
         map: map,
-        animation: google.maps.Animation.DROP
+        animation: google.maps.Animation.DROP,
+        title: `${venue.name} (Click to zoom)`
       });
+      // click event for each marker to display venue information
+      marker.addListener('click', function() {
+        map.panTo(marker.getPosition());
+        map.setZoom(12);
+        map.setCenter(marker.getPosition());
+        document.querySelector('.info-address-card').innerHTML = 
+        `<h3><strong>${venue.name}</strong></h3> <br>
+        <h4><strong>Address:</strong> ${venue.address}</h4> <br>
+        <h4><strong>Phone:</strong> ${venue.phone}</h4> <br>
+        <h4><strong>Email:</strong> ${venue.email}</h4> <br>
+        `;
+      })
     })
   }
 

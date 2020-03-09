@@ -16,6 +16,11 @@
     <%= f.input :last_name,
                 required: true,
                 input_html: { autocomplete: "last-name" } %>
+    Birthdate: <br>
+    <%= f.date_select :birthdate,
+                required: true,
+                label: "Birth date:",
+                input_html: { autocomplete: "birthdate" } %> <br><br>
     <%= f.input :password,
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
