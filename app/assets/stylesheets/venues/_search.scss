@@ -49,10 +49,11 @@
   margin: 0 auto;
   justify-content: center;
   // min-height: 300px;
+  height: 80vh;
 }
 
 .map-search-container {
-  height: 50vh;
+  // height: 50vh;
   width: 70%;
   float: left;
   border: solid 1px black;
@@ -61,7 +62,7 @@
 
 
 .info-container {
-  height: 50vh;
+  // height: 50vh;
   width: 30%;
   float: right;
   border: solid 1px black;

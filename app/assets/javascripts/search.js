@@ -34,19 +34,21 @@ function initMap(lat, lng, initialZoom, venues) {
         position: (venueCoords),
         map: map,
         animation: google.maps.Animation.DROP,
-        title: `${venue.name} (Click to zoom)`
+        title: `${venue.name} (Click to focus)`
       });
       // click event for each marker to display venue information
       marker.addListener('click', function() {
         map.panTo(marker.getPosition());
-        map.setZoom(12);
-        map.setCenter(marker.getPosition());
+        setTimeout(function() {
+          map.setCenter(marker.getPosition());
+          map.setZoom(12);
+        }, 800);
         document.querySelector('.info-address-card').innerHTML = 
-        `<h3><strong>${venue.name}</strong></h3> <br>
-        <h4><strong>Address:<br></strong> ${venue.address}</h4> <br>
-        <h4><strong>Phone:<br></strong> ${venue.phone}</h4> <br>
-        <h4><strong>Email:<br></strong> ${venue.email}</h4> <br>
-        <h4> <a style='position: absolute; bottom: 10px;' href='venues/${venue.id}'>Venue Details</a></h4>
+        `<h4><strong>${venue.name}</strong></h4> <br>
+        <h6><strong>Address:<br></strong> ${venue.address}</h6> <br>
+        <h6><strong>Phone:<br></strong> ${venue.phone}</h6> <br>
+        <h6><strong>Email:<br></strong> ${venue.email}</h6> <br>
+        <h6> <a style='position: absolute; width: 100%; text-align: center; bottom: 10px;' href='venues/${venue.id}'>Venue Details</a></h6>
         `;
       })
     })
