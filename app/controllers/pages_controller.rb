@@ -3,6 +3,13 @@ class PagesController < ApplicationController
 
   def home
     @resources = Resource.first(8)
+    @venues = Venue.all
+    @venues_with_active_job_listings = []
+    @venues.each do |venue|
+      active_job = Job.find_by(venue: venue)
+      @venues_with_active_job_listings << active_job.venue if active_job
+    end
+    @featured_venues = @venues_with_active_job_listings.shuffle.first(3)
   end
 
   def about
