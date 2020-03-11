@@ -1,54 +1,62 @@
 <div class="featured-venues-container">
-  <%# <div class="container"> %>
-
-    <div class="carousel-container">
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div style="height: 350px; font-weight: bold;"class="carousel-item  active">
-            <img class="d-block w-100" src="<%= @featured_venues[0].banner%>" alt="First slide" >
-              <div class="carousel-caption d-none d-md-block">
-                <h3>Featured Venues</h3>
-                <h6>Job Listings Active!</h6>
-                <br><br>
-                <h5><%= @featured_venues[0].name %></h5>
-                <p><%= @featured_venues[0].description %></p>
-              </div>
-          </div>
-          <div style="height: 350px; font-weight: bold;"class="carousel-item ">
-            <img class="d-block w-100" src="<%= @featured_venues[1].banner%>" alt="Second slide" >
-              <div class="carousel-caption d-none d-md-block">
-                <h3>Featured Venues</h3>
-                <h6>Job Listings Active!</h6>
-                <br><br>
-                <h5><%= @featured_venues[1].name %></h5>
-                <p><%= @featured_venues[1].description %></p>
-              </div>
-          </div>
-          <div style="height: 350px; font-weight: bold;"class="carousel-item ">
-            <img class="d-block w-100" src="<%= @featured_venues[2].banner%>" alt="Third slide" >
-              <div class="carousel-caption d-none d-md-block">
-                <h3>Featured Venues</h3>
-                <h6>Job Listings Active!</h6>
-                <br><br>
-                <h5><%= @featured_venues[2].name %></h5>
-                <p><%= @featured_venues[2].description %></p>
-              </div>
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-    </div>
-  <%# </div> %>
+  <ul class="featured-venues-carousel" data-target="carousel">
+    <%= @featured_venues.each do |venue| %>
+      <li class="featured-venues-card" data-target="card">
+        <h4><%= venue.name %></h4>
+        <p><%= venue.description %></p>
+      </li>
+    <% end %>
+  </ul>
+  <div class="button-container">
+    <button data-action="slideLeft">L</button>
+    <button data-action="slideRight">R</button>
+  </div>
 </div>
+
+
+
+
+
+
+
+
+<script>
+  // Select carousel to manipulate and the buttons to add events to
+  const carousel = document.querySelector("[data-target='carousel']");
+  const card = carousel.querySelector("[data-target='card']");
+  const leftButton = document.querySelector("[data-action='slideLeft']");
+  const rightButton = document.querySelector("[data-action='slideRight']");
+
+  // Prepare to limit the direction in which the carousel can slide, 
+  // and to control how much the carousel advances by each time.
+  // In order to slide the carousel so that only three cards are perfectly visible each time,
+  // you need to know the carousel width, and the margin placed on a given card in the carousel
+  const carouselWidth = carousel.offsetWidth;
+  const cardStyle = card.currentStyle || window.getComputedStyle(card)
+  const cardMarginRight = Number(cardStyle.marginRight.match(/\d+/g)[0]);
+
+  // Count the number of total cards in carousel
+  const cardCount = carousel.querySelectorAll("[data-target='card']").length;
+
+  // Define an offset property to dynamically update by clicking the button controls
+  // as well as a maxX property so the carousel knows when to stop at the upper limit
+  let offset = 0;
+  const maxX = -((cardCount / 3) * carouselWidth + 
+                (cardMarginRight * (cardCount / 3)) - 
+                carouselWidth - cardMarginRight);
+                
+  // Add the click events
+  leftButton.addEventListener("click", function() {
+    if (offset !== 0) {
+      offset += carouselWidth + cardMarginRight;
+      carousel.style.transform = `translateX(${offset}px)`;
+      }
+  })
+    
+  rightButton.addEventListener("click", function() {
+    if (offset !== maxX) {
+      offset -= carouselWidth + cardMarginRight;
+      carousel.style.transform = `translateX(${offset}px)`;
+    }
+  })
+</script>
