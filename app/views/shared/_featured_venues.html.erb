@@ -1,9 +1,9 @@
 <div class="featured-venues-container">
   <ul class="featured-venues-carousel" data-target="carousel">
     <%= @featured_venues.each do |venue| %>
-      <li class="featured-venues-card" data-target="card">
+      <li class="featured-venues-card" data-target="card" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.5)), url(<%= venue.banner %>;">
         <h4><%= venue.name %></h4>
-        <p><%= venue.description %></p>
+        <p><%#= venue.description %></p>
       </li>
     <% end %>
   </ul>
@@ -12,6 +12,33 @@
     <button data-action="slideRight">R</button>
   </div>
 </div>
+
+
+
+<!-- Sub this in for card from venue#index-->
+
+<!-- 
+<div class="card-venue-index" data-aos="fade-in">
+  <%= image_tag venue.banner %>
+  <div class="card-venue-infos">
+    <div class="venue-infos">
+      <h4><%= link_to "#{venue.name}", venue_path(venue) %></h4>
+      <p><%= venue.suburb %></p>
+    </div>
+    <div class="open-job-listings">
+      <% if !Job.where(venue: venue).empty? %>
+        <p>Open job listings!</p>
+      <% end %>
+    </div>
+  </div>
+</div>
+-->
+
+
+
+
+
+
 
 
 

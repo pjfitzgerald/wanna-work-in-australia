@@ -1,11 +1,13 @@
 .featured-venues-container {
   // padding-bottom: 25px;
   // padding-top: 25px;
-  height: 200px;
-  width: 632px;
+  height: 300px;
+  width: 992px;
   position: relative;
   overflow: hidden;
   margin: 0 auto;
+  // margin-top: 25px;  
+  margin-bottom: 25px;  
 }
 
 .button-container {
@@ -30,9 +32,9 @@
 
 .featured-venues-card {
   color: white;
-  background: black;
-  min-width: 200px;
-  height: 200px;
+  // background: black;
+  min-width: 320px;
+  height: 300px;
   margin-right: 1rem;
   display: inline-block;
 }
