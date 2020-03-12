@@ -67,7 +67,7 @@
   margin-right: auto;
   margin-left: auto;
   text-align: center;
-  padding-bottom: 25px;
+  // padding-bottom: 25px;
   padding-top: 25px;
 }
 
@@ -79,9 +79,7 @@
 }
 
 .home-resource-card {
-  background: #d3d3d3; // inline styled image is overriding this
   box-shadow: 0 0 5px rgba(94, 67, 67, 0.2);
-  // border: solid 1px black;
   margin: 5px;
   height: 200px;
   width: 200px;
@@ -108,7 +106,14 @@
 }
 
 
-
+.home-featured-venues-container {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  padding-bottom: 25px;
+  // padding-top: 25px;
+}
 
 
 

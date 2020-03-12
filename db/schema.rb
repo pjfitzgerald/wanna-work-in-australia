@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_09_072449) do
+ActiveRecord::Schema.define(version: 2020_03_12_110502) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 2020_03_09_072449) do
     t.datetime "updated_at", null: false
     t.string "length_of_stay"
     t.string "country_of_origin"
+    t.text "content"
     t.index ["job_id"], name: "index_applications_on_job_id"
   end
 

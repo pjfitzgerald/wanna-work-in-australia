@@ -9,6 +9,13 @@
   background-color: #d3d3d3;
 }
 
+.featured-venues-container a {
+  color: white;
+}
+.featured-venues-container a:hover {
+  color: $primary;
+}
+
 // .carousel-item > img {
   
 // }

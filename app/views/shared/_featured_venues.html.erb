@@ -12,30 +12,24 @@
           <div style="height: 350px; font-weight: bold;"class="carousel-item  active">
             <img class="d-block w-100" src="<%= @featured_venues[0].banner%>" alt="First slide" >
               <div class="carousel-caption d-none d-md-block">
-                <h3>Featured Venues</h3>
-                <h6>Job Listings Active!</h6>
                 <br><br>
-                <h5><%= @featured_venues[0].name %></h5>
+                <h5><%= link_to @featured_venues[0].name %></h5>
                 <p><%= @featured_venues[0].description %></p>
               </div>
           </div>
           <div style="height: 350px; font-weight: bold;"class="carousel-item ">
             <img class="d-block w-100" src="<%= @featured_venues[1].banner%>" alt="Second slide" >
               <div class="carousel-caption d-none d-md-block">
-                <h3>Featured Venues</h3>
-                <h6>Job Listings Active!</h6>
                 <br><br>
-                <h5><%= @featured_venues[1].name %></h5>
+                <h5><%= link_to @featured_venues[1].name %></h5>
                 <p><%= @featured_venues[1].description %></p>
               </div>
           </div>
           <div style="height: 350px; font-weight: bold;"class="carousel-item ">
             <img class="d-block w-100" src="<%= @featured_venues[2].banner%>" alt="Third slide" >
               <div class="carousel-caption d-none d-md-block">
-                <h3>Featured Venues</h3>
-                <h6>Job Listings Active!</h6>
                 <br><br>
-                <h5><%= @featured_venues[2].name %></h5>
+                <h5><%= link_to @featured_venues[2].name %></h5>
                 <p><%= @featured_venues[2].description %></p>
               </div>
           </div>

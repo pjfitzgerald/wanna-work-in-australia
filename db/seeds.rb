@@ -64,7 +64,7 @@ populate_venue_coordinate_data
 
 def seed_jobs
   for x in (0..25) do
-    Job.create!(title: Faker::Job.title, description: "This is a test job description", status: ["Open", "Filled"].sample, venue: Venue.order('RANDOM()').first)
+    Job.create!(title: Faker::Job.title, description: Faker::Lorem.paragraph(sentence_count: 50), status: ["Open", "Filled"].sample, venue: Venue.order('RANDOM()').first)
   end
   puts "#{Job.count} jobs created"
 end

@@ -1,16 +1,20 @@
+<div class="wwia-banner" style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.4)), url(<%= Region.find(params[:id]).banner %>">
 
-<div class="region-show-banner">
-  <!-- <%= image_tag @region.banner, src: "Image not found!", class: "region-show-banner-image" %> -->
   <div class="container">
-    <div class="region-show-container">
-      <h1><%= @region.name %></h1>
-      <p><%= @region.description %></p>
-
-
-      <p>More information: <%= link_to "visitcanberra.com.au", @region.link %></p>
-      <br>
-      <%= link_to "Browse venues in this region", region_venues_path(@region), class: "btn btn-secondary" %>
-    </div>
+      <h2><strong><%= Region.find(params[:id]).name %></strong></h2>
   </div>
 
 </div>
+
+<div class="container">
+  <div class="region-show-container">
+    <!-- <h1><%= @region.name %></h1> -->
+    <p><%= @region.description %></p>
+
+
+    <p>More information: <%= link_to "visitcanberra.com.au", @region.link %></p>
+    <br>
+    <%= link_to "Browse venues in this region", region_venues_path(@region), class: "btn btn-secondary" %>
+  </div>
+</div>
+

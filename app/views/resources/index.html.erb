@@ -1,4 +1,4 @@
-
+<!--
 
 <div class="container">
   <h1 style="text-align:center; margin-top:10px">Resources</h1>
@@ -20,3 +20,20 @@
 </div>
 
 
+-->
+
+<div class="home-resources-container">
+    <div class="container">
+      <h3>How to work in Australia</h3>
+      <h6>All the relevant information you'll need</h6>
+      <div class="home-resources-cards-container">
+        <% @resources.each do |resource| %>
+          <a class="home-resource-card" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.5)) ,url(<%= resource.banner %>;" href="<%= resource_path(resource) %>">
+            <div class="home-resource-card-infos"> 
+              <h5><%= resource.title %></h5>
+            </div>
+          </a>
+        <% end %>
+      </div>
+    </div>
+  </div>

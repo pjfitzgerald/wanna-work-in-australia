@@ -1,18 +1,21 @@
+<div class="wwia-banner" style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.4)), url(<%= @job.venue.banner %>">
+  <div class="container">
+      <h2><%= @job.title %> @ <%= @job.venue.name %></h2>
+  </div>
 
+</div>
 
 
 <div class="container">
-    <h2>You're applying for the position of <%= @job.title %> @ <%= @job.venue.name %></h2>
     <br>
-    <h4>Please answer the below questions before submitting your application</h4>
-    <br>
-    <br>
+    <h4>Please complete the below form to submit your application</h4>
     <br>
   <div class="new-application-container">
-
     <%= simple_form_for [@user, @application], url: venue_job_applications_path do |f| %>
       <%= f.input :length_of_stay, collection: ["Less than 6 months", "6 months", "1 year", "18 months", "2 years", "More than 2 years"], label: "Approximate length of stay", required: true %>
       <%= f.input :country_of_origin, as: :country, required: true %>
+      <br>
+      <%= f.input :content, label: "Tell us about yourself", required: true %>
       <br>
       <%= f.input :resume, as: :file, label: "Upload your resume here", required: true %>
       <br>
