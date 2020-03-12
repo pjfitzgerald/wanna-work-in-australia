@@ -5,7 +5,34 @@ function initMap(lat, lng, initialZoom, venues) {
 
   const mapOptions = {
     center: myCoords,
-    zoom: initialZoom
+    zoom: initialZoom,
+    disableDefaultUI: true,  // removes map/satellite and other intrusive UI elements
+    styles: [
+      {
+        "elementType": "labels",
+        "stylers": [
+          {
+            "visibility": "on"
+          }
+        ]
+      },
+      {
+        "featureType": "administrative.land_parcel",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "administrative.neighborhood",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      }
+    ]
   };
 
   // setting map to variable for reference

@@ -1,12 +1,34 @@
+
+/*--------overriding boostrap-------*/
+
+
+.navbar-brand {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+
+/*-------------------*/
+
+
 .navbar-wwia {
-  position: -webkit-sticky; // for safari
-  position: sticky;
+  // position: -webkit-sticky; // for safari
+  // position: sticky;
   top: 0px;
   z-index: 1020;
   justify-content: space-between;
-  background: $primary;
-  opacity: 0.9;
+  // background: $primary;
+  background-color: transparent;
+  transition: 0.5s background-color ease;
+  // opacity: 0.8;
+  // box-shadow: 0px 2px 3px rgba(0,0,0,.2);
+}
+
+.navbar-wwia-border-bottom {
+  background-color: $primary;
+  transition: 3s background-color ease;
   box-shadow: 0px 2px 3px rgba(0,0,0,.2);
+  transition: 0.2s box-shadow;
 }
 
 .navbar-wwia .navbar-collapse {

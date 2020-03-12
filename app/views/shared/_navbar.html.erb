@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-wwia">
+<div class="navbar navbar-expand-sm navbar-light navbar-wwia fixed-top">
   <%= link_to "/", class: "navbar-brand" do %>
     <%= image_tag "https://res.cloudinary.com/dkowfxwpp/image/upload/v1579755994/wwia/wwia_logo_llpv0y.png" %>
   <% end %>
@@ -41,3 +41,22 @@
   </div>
 </div>
 
+
+<script>
+  const initUpdateNavbarOnScroll = () => {
+    const navbar = document.querySelector('.navbar-wwia');
+    const map = document.getElementById('map');
+    if (navbar) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY >= 285) {
+          navbar.classList.add('navbar-wwia-border-bottom');
+        } else {
+          navbar.classList.remove('navbar-wwia-border-bottom');
+        }
+      });
+    }
+  }
+
+  initUpdateNavbarOnScroll();
+
+</script>
