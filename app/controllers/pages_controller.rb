@@ -10,6 +10,7 @@ class PagesController < ApplicationController
       @venues_with_active_job_listings << active_job.venue if active_job
     end
     @featured_venues = @venues_with_active_job_listings.shuffle.first(3)
+    gon.venues = Venue.all
   end
 
   def about

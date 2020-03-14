@@ -1,26 +1,27 @@
 
 <div class="wwia-banner" style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.4)), url(<%= @venue.banner %>">
   <div class="container">
-      <h2><%= @job.title %> @ <%= @job.venue.name %></h2>
+      <h2><%= @job.venue.name %></h2>
   </div>
 
 </div>
 
 <div class="container">
   <div class="card-job-show">
-    
+    <h2><%= @job.title %></h2>
+    <br>
     <p><%= @job.description %></p>
     <%# check if user is logged in %>
-    <% if user_signed_in? %>
+    <%# if user_signed_in? %>
       <%# check if user has already applied for this job %>
       <% if @application %>
         <%= link_to "You've already applied! Click here to check on the status of your application", user_application_path(current_user, @application), class: "btn btn-primary" %>
       <% else %>
         <%= link_to "Click here to apply for this job", new_venue_job_application_path(@venue, @job), class: "btn btn-primary" %>
       <% end %>
-    <% else %>
-      <%= link_to "Sign up or sign in to apply for this job", new_user_registration_path, class: "btn btn-primary" %>
-    <% end %>
+    <%# else %>
+      <%#= link_to "Sign up or sign in to apply for this job", new_user_registration_path, class: "btn btn-primary" %>
+    <%# end %>
     <br>
     <br>
 

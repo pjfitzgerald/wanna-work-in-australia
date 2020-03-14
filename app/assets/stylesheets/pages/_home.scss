@@ -3,8 +3,11 @@
 .home-banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
   background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/dkowfxwpp/image/upload/v1579955096/wwia/sydney2_w0ek6q.jpg);
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  border-bottom: 4px solid white;
 }
 
 .home-banner h1 {
@@ -62,20 +65,32 @@
   color: $primary;
 }
 
+
+.home-map-container {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.home-map-headers {
+  padding-bottom: 15px;
+}
+
+
 .home-resources-container {
   width: 80%;
   margin-right: auto;
   margin-left: auto;
   text-align: center;
-  // padding-bottom: 25px;
   padding-top: 25px;
 }
 
+.home-resources-headers {
+  padding-bottom: 15px;
+}
 
 .home-resources-cards-container {
   display: flex;
   flex-wrap: wrap;
-  padding: 35px;
 }
 
 .home-resource-card {
@@ -97,12 +112,8 @@
 }
 
 .home-resource-card:hover .home-resource-card-infos h5{
-    color: #d3d3d3;
-
-}
-
-.home-map-container {
-  padding: 25px;
+  color: #d3d3d3;
+  
 }
 
 
@@ -114,12 +125,6 @@
   padding-bottom: 25px;
   // padding-top: 25px;
 }
-
-
-
-
-
-
 
 /* -------- Media Queries for window size -------- */
 /* -------- Columns side-by-side vs stacked -------- */
