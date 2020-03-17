@@ -1,13 +1,12 @@
 <div class="wwia-banner" style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/dkowfxwpp/image/upload/v1579955096/wwia/sydney2_w0ek6q.jpg">
 
   <div class="container">
-      <h2>Venues</h2>
+      <h2>Venues with active job listings</h2>
   </div>
-
 </div>
 
 <div class="container d-flex justify-content-center mt-3">
-  <%= link_to "Click here to only see venues with active job listings", active_venues_path, class: "btn btn-outline" %>
+  <%= link_to "View All Venues", venues_path, class: "btn btn-outline" %>
 </div>
 
 <%= render 'venue_card' %>

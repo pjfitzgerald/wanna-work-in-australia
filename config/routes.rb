@@ -27,11 +27,12 @@ Rails.application.routes.draw do
   
   resources :resources, only: [:index, :show]
 
+  get "venues/active", to: "venues#active", as: :active_venues
+  get "search", to: "venues#search", as: :search
   resources :venues, only: [:index, :show] do 
     resources :jobs, only: [:show, :new, :create] do
       resources :applications
     end
   end
-  get "search", to: "venues#search", as: :search
 
 end

@@ -25,9 +25,21 @@ class VenuesController < ApplicationController
     else
       @venues = Venue.all
     end
+    if params[:sort].present?
+      # sort the venues by the criteria provided
+    end
     venue_search
   end
   
+  def active
+    @venues = []
+    Venue.all.each do |venue|
+      if venue.jobs != []
+        @venues << venue 
+      end
+    end
+  end
+
   def show
     @venue = Venue.find(params[:id])
     @jobs = Job.where(venue: @venue) if Job.where(venue: @venue) != [] 
