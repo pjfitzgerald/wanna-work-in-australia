@@ -7,9 +7,21 @@
 
 </div>
 
+
+<div class="container">
+  <div class="states-container">
+    <div class="state-cards-container">
+      <% @states.each do |state| %>
+        <div class="state-card" style="background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.4)), url(<%= state[1] %>); background-size: contain;">
+          <h2><%= state[0] %></h2>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
 <div class="container">
   <div class="regions-container">
-    <%# List all regions %>
     <% @regions.each_with_index do |region, index| %>
       <% current_state = region.state %>
       <% if @regions[index - 1].state != current_state %>
