@@ -1,7 +1,15 @@
 
+<div class="wwia-banner" style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/dkowfxwpp/image/upload/v1579955096/wwia/sydney2_w0ek6q.jpg">
+
+  <div class="container">
+      <h2>Sign Up</h2>
+  </div>
+
+</div>
+
+<br>
+
 <div class="container">
-  <h2>Sign up</h2>
-  <br>
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
@@ -16,11 +24,12 @@
     <%= f.input :last_name,
                 required: true,
                 input_html: { autocomplete: "last-name" } %>
-    Birthdate: <br>
-    <%= f.date_select :birthdate,
-                required: true,
-                label: "Birth date:",
-                input_html: { autocomplete: "birthdate" } %> <br><br>
+    <%= f.input :birthdate,
+                as: :date,
+                start_year: Date.today.year - 15,
+                end_year: Date.today.year - 90,
+                order: [:day, :month, :year],
+                required: true %>
     <%= f.input :password,
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
