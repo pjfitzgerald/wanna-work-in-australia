@@ -42,10 +42,10 @@ class ApplicationsController < ApplicationController
         flash[:notice] = "Make sure you upload your resume!"
       else
         if @application.save!
-          redirect_to user_applications_path(current_user)
           # mailer to send application to venue / VA, AND to traveller for confirmation
-          ApplicationsMailer.application_submission(@user, @job)
+          ApplicationsMailer.application_submission(@user, @job).deliver_now
           # decide if the above layout makes sense to send to both the venue and the traveller as a copy, otherwise will need to add additional method in mailer
+          redirect_to user_applications_path(current_user)
           
           flash[:notice] = "Congratulations, your application has been submitted."
 

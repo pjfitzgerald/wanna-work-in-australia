@@ -10,7 +10,7 @@
   <body>
     <h2>Hey <%= @user.first_name %>, you've successfully applied to <%= @venue.name %>!</h2>
     <p>
-      To view your current applications, follow <%= link_to "this link", @applications_path %>
+      To view your current applications, follow <%= link_to "this link", "#{@applications_path}/#{@sub_path}" %>
     </p>
   </body>
 </html>
