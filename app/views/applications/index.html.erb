@@ -1,26 +1,26 @@
+<div class="wwia-banner" style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/dkowfxwpp/image/upload/v1579955096/wwia/sydney2_w0ek6q.jpg">
+
+  <div class="container">
+      <h2>Your Applications</h2>
+  </div>
+
+</div>
 
 <div class="container">
-  <h1 style="text-align:center; margin-top:10px">Your Applications</h1>
-    <% @applications.each do |application| %>
-      <div class="card-application-index">
-        <div class="card-application-index-infos">
-
-          <h4><%= application.job.title %> @ <%= application.job.venue.name %></h4>
-          
-          <p><strong> Job Description: </strong> <br>
-             <%= application.job.description %> </p>
-          
-          <div class="application-status-container">
-            <h5>Status: <%= application.status %></h5>
-          </div>
-
-          <%= link_to "View Application", user_application_path(current_user, application) %>
-          
-          <%# if application.status == "Open" %>
-            <%#= link_to "Edit", edit_user_application_path(application), class: "btn btn-primary" %>
-          <%# end %>
-
+  <% @applications.each do |application| %>
+    <div class="card-application-index">
+      <div class="card-application-index-infos">
+      
+        <h4><%= application.job.title %> @ <%= application.job.venue.name %></h4>
+        <p><strong> Job Description: </strong><br><%= application.job.description %></p>
+        
+        <div class="application-status-container">
+          <h5>Status: <%= application.status %></h5>
         </div>
+
+        <%= link_to "View Application", user_application_path(current_user, application) %>
+
       </div>
-    <% end %>
+    </div>
+  <% end %>
 </div> 

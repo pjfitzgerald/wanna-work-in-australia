@@ -2,8 +2,6 @@
 @import "new";
 
 .card-application-index {
-  height: 20vh;
-  // width: 60%;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -35,6 +33,10 @@
   justify-content: space-around;
   align-items: flex-start;
   padding: 10px 25px;
+}
+
+.card-application-index-infos a {
+  align-self: center;
 }
 
 .application-status-container {
