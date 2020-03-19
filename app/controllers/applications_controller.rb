@@ -37,18 +37,20 @@ class ApplicationsController < ApplicationController
       elsif params[:application][:country_of_origin].empty?
         render :new
         flash[:notice] = "Please select your country of origin!"
+      elsif params[:application][:content].empty?
+        render :new
+        flash[:notice] = "Please tell us about yourself in the content section!"
       elsif !@application.resume.attached?
         render :new
         flash[:notice] = "Make sure you upload your resume!"
       else
         if @application.save!
-          # mailer to send application to venue / VA, AND to traveller for confirmation
-          ApplicationsMailer.application_submission(@user, @job).deliver_now
-          # decide if the above layout makes sense to send to both the venue and the traveller as a copy, otherwise will need to add additional method in mailer
+          #send confirmation email to user
+          ApplicationsMailer.application_submission_user_confirmation(@user, @job).deliver_now
+          #send email to venue including user details and resume attached
+          # ApplicationsMailer.application_submission_to_venue(@user, @job).deliver_now
           redirect_to user_applications_path(current_user)
-          
           flash[:notice] = "Congratulations, your application has been submitted."
-
         else
           render :new
           flash[:notice] = "Something went wrong!"
@@ -65,7 +67,7 @@ class ApplicationsController < ApplicationController
   private
 
   def application_params
-    params.require(:application).permit(:length_of_stay, :country_of_origin, :resume)
+    params.require(:application).permit(:length_of_stay, :country_of_origin, :resume, :content)
   end
   
 end

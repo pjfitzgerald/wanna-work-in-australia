@@ -42,6 +42,8 @@ GEM
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    addressable (2.7.0)
+      public_suffix (>= 2.0.2, < 5.0)
     arel (9.0.0)
     autoprefixer-rails (9.7.4)
       execjs
@@ -81,6 +83,8 @@ GEM
       countries (~> 3.0)
       sort_alphabetical (~> 1.0)
     crass (1.0.6)
+    css_parser (1.7.1)
+      addressable
     devise (4.7.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -107,6 +111,7 @@ GEM
       i18n (>= 0.7)
       multi_json
       request_store (>= 1.0)
+    htmlentities (4.3.4)
     http-accept (1.7.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
@@ -143,6 +148,13 @@ GEM
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
     pg (0.21.0)
+    premailer (1.11.1)
+      addressable
+      css_parser (>= 1.6.0)
+      htmlentities (>= 4.0.0)
+    premailer-rails (1.11.0)
+      actionmailer (>= 3)
+      premailer (~> 1.7, >= 1.7.9)
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
@@ -151,6 +163,7 @@ GEM
       pry (~> 0.10)
     pry-rails (0.3.9)
       pry (>= 0.10.4)
+    public_suffix (4.0.3)
     puma (4.3.1)
       nio4r (~> 2.0)
     pundit (2.1.0)
@@ -272,6 +285,7 @@ DEPENDENCIES
   listen (~> 3.0.5)
   neatjson
   pg (~> 0.21)
+  premailer-rails
   pry-byebug
   pry-rails
   puma

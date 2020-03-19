@@ -27,7 +27,7 @@ import_regions
 
 if Rails.env.development?
   def seed_users
-    Traveller.create!(first_name: "Pat The Tester", last_name: "Fitz", email: "patrick.fitzgerald29@gmail.com", password: "123456")
+    Traveller.create!(first_name: "Tester", last_name: "Fitz", email: "patrick.fitzgerald29@gmail.com", password: "123456")
     for x in (0..10) do 
       traveller = Traveller.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: "temp@email.com", password: "123456")
       traveller.email = "#{traveller.first_name}.#{traveller.last_name}@testing.com"

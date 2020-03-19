@@ -10,14 +10,23 @@
 
 <div class="container">
   <div class="app-show-card">
-    <strong>Venue: </strong><%= @application.job.venue.name %>
-    <br>
+    <h4>Venue Details</h4>
+    <strong>Name: </strong><%= @application.job.venue.name %>
+    <br><br>
     <strong>Job Title: </strong><%= @application.job.title %>
-    <br>
+    <br><br>
     <strong>Job Description: </strong><%= @application.job.description %>
-    <br>
+    <br><br>
+    <h4>Application Details</h4>
+    <strong>Length of Stay: </strong><%= @application.length_of_stay %>
+    <br><br>
+    <strong>Country of Origin: </strong><%= @application.country_of_origin %>
+    <br><br>
+    <strong>Content: </strong><%= @application.content %>
+    <br><br>
+
     <% if @application.resume.attached? %>
-      <%= link_to "Download submitted resume", @application.resume, disposition: "attachment" %>
+      <%= link_to "Download your submitted resume", @application.resume, disposition: "attachment" %>
     <% end %>
 
     <%# below preview currently not behaving correctly, currently same as above %>

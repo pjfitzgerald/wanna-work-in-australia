@@ -1,5 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'do-not-reply@wwia.com'
+  default from: 'WWIA@wwia.com'
   # layout 'mailer'
 
 end
