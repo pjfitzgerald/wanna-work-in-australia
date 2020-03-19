@@ -55,7 +55,7 @@ def import_venues
     Venue.create!(name: row[:name], region_name: row[:region_name], address: row[:address], suburb: row[:suburb], email: row[:email], link: row[:link], phone: row[:phone], banner: row[:banner], description: Faker::Lorem.paragraph(sentence_count: 25))
     x += 1
   end
-  puts "#{Venue.count} venues created"
+  puts "#{Venue.count} venues loaded"
 end
 
 import_venues

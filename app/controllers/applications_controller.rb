@@ -44,11 +44,12 @@ class ApplicationsController < ApplicationController
         render :new
         flash[:notice] = "Make sure you upload your resume!"
       else
+        # raise
         if @application.save!
           #send confirmation email to user
-          ApplicationsMailer.application_submission_user_confirmation(@user, @job).deliver_now
+          ApplicationsMailer.application_submission_user_confirmation(@application).deliver_now
           #send email to venue including user details and resume attached
-          # ApplicationsMailer.application_submission_to_venue(@user, @job).deliver_now
+          # ApplicationsMailer.application_submission_to_venue(@application).deliver_now
           redirect_to user_applications_path(current_user)
           flash[:notice] = "Congratulations, your application has been submitted."
         else
