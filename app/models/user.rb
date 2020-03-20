@@ -8,6 +8,12 @@ class User < ApplicationRecord
   after_create :skip_confirm
 
   has_one_attached :profile_image
+
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+  validates :birthdate, presence: true
+  validates_acceptance_of :terms
+
   
   private
 

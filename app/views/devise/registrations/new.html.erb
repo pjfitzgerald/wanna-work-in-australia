@@ -21,6 +21,7 @@
     <%= f.input :first_name,
                 required: true,
                 input_html: { autocomplete: "first-name" } %>
+    <%= f.error :first_name %>
     <%= f.input :last_name,
                 required: true,
                 input_html: { autocomplete: "last-name" } %>
@@ -29,6 +30,7 @@
                 start_year: Date.today.year - 15,
                 end_year: Date.today.year - 90,
                 order: [:day, :month, :year],
+                include_blank: true,
                 required: true %>
     <%= f.input :password,
                 required: true,
