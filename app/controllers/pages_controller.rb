@@ -11,6 +11,10 @@ class PagesController < ApplicationController
     end
     @featured_venues = @venues_with_active_job_listings.shuffle.first(3)
     gon.venues = Venue.all
+
+    # for dashboard partial
+    @applications = Application.where(traveller: current_user)
+
   end
 
   def about

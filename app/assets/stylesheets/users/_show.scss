@@ -14,7 +14,6 @@
 
 .cards-container {
   width: 100%;
-  height: 70vh;
   padding-right: 50px;
   padding-left: 50px;
   margin-right: auto;
@@ -22,9 +21,7 @@
 }
 
 
-
 /* ----- Dashboard Cards ----- */
-
 
 
 .card-dashboard {
@@ -32,7 +29,7 @@
   flex-direction: column;
   justify-content: space-between;
   background: white;
-  box-shadow: 0 0 15px rgba(94, 67, 67, 0.2);
+  box-shadow: 0 0 0px rgba(94, 67, 67, 0.2);
   margin: 15px;
   padding: 10px;
   height: 450px;
@@ -98,8 +95,6 @@
 
 
 
-
-
 /* ----- Applications ----- */
 
 
@@ -112,13 +107,13 @@
 }
 
 .card-application {
-  height: 10vh;
+  min-height: 10vh;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 15px;
+  margin: 10px;
 }
 
 .card-application h2 {

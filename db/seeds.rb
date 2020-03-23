@@ -46,6 +46,8 @@ if Rails.env.development?
   seed_users
 end
 
+# create one test venue
+Venue.create!(name: "Test-Venue01", region_name: "Melbourne", address: "362 Beach Road", suburb: "Black Rock", email: "pfitz.dev@gmail.com ", link: "wwia.herokuapp.com", description: Faker::Lorem.paragraph(sentence_count: 25))
 
 def import_venues
   csv_options = { col_sep: '|', quote_char: '"', headers: :first_row, header_converters: :symbol }
