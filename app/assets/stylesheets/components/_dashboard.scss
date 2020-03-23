@@ -1,0 +1,81 @@
+.home-dash-headers {
+  text-align: center;
+  margin: 10px;
+}
+
+.dash-home-cards-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.card-dash-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: white;
+  box-shadow: 0 0 0px rgba(94, 67, 67, 0.2);
+  margin: 15px;
+  padding: 10px;
+  height: 450px;
+  width: 100%;
+}
+
+
+.card-dash-home h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+}
+
+.card-dash-home p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+  text-align: center;
+}
+
+.card-app-home {
+  min-height: 10vh;
+  background: white;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.card-app-home h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  
+}
+
+.card-app-home p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-app-home .card-app-home-infos {
+  padding: 10px;
+  text-align: center;
+}
+
+.dash-home-search-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: auto;
+  background: white;
+  justify-content: center;
+  // align-content: space-between;
+}
+
+
