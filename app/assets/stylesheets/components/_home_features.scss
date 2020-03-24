@@ -1,0 +1,20 @@
+
+.features-container {
+  width: 100%;
+  text-align: center;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: $light-gray;
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+
+.features-container a {
+  color: black;
+}
+
+.features-container a:hover {
+  color: $primary;
+}

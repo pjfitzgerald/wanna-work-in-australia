@@ -1,0 +1,39 @@
+
+.home-resources-container {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  padding-top: 25px;
+}
+
+.home-resources-headers {
+  padding-bottom: 15px;
+}
+
+.home-resources-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.home-resource-card {
+  box-shadow: 0 0 5px rgba(94, 67, 67, 0.2);
+  margin: 5px;
+  height: 200px;
+  width: 200px;
+  flex: 1 0 21%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: 100% 100%;
+  
+}
+
+.home-resource-card-infos h5 {
+  font-weight: 800;
+  color: white;
+}
+
+.home-resource-card:hover .home-resource-card-infos h5{
+  color: #d3d3d3;
+  
+}
