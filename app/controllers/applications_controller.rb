@@ -49,7 +49,7 @@ class ApplicationsController < ApplicationController
           #send confirmation email to user
           ApplicationsMailer.application_submission_user_confirmation(@application).deliver_now
           #send email to venue including user details and resume attached
-          # ApplicationsMailer.application_submission_to_venue(@application).deliver_now
+          ApplicationsMailer.application_submission_to_venue(@application).deliver_now
           redirect_to user_applications_path(current_user)
           flash[:notice] = "Congratulations, your application has been submitted."
         else

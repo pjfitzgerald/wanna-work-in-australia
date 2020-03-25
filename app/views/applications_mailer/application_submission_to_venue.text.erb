@@ -1,0 +1,38 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+  </head>
+  <body>
+
+
+
+      <div class="container">
+          <%= image_tag "https://res.cloudinary.com/dkowfxwpp/image/upload/v1579755994/wwia/wwia_logo_llpv0y.png", class: "mailer-wwia-logo" %>
+      </div>
+
+    </div>
+
+    <div class="applications-mailer-container">
+      <div class="container">
+        <h3>
+          Hey <%= @user.first_name %>, you've successfully applied to <%= @venue.name %>!
+        </h3>
+        <br>
+        <p>
+          Congrats, etc.
+          <br>
+          Next steps, etc.
+        </p>
+        <br>
+        <%= link_to "Click here to view your current applications", "#{@applications_path}/#{@sub_path}", class: "btn btn-primary" %>
+      </div>
+    </div>
+
+  </body>
+</html>

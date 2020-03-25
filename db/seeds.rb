@@ -47,7 +47,7 @@ if Rails.env.development?
 end
 
 # create one test venue
-Venue.create!(name: "Test-Venue01", region_name: "Melbourne", address: "362 Beach Road; Black Rock", suburb: "Black Rock", email: "pfitz.dev@gmail.com ", link: "wwia.herokuapp.com", description: Faker::Lorem.paragraph(sentence_count: 25), banner: "https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643734/wwia/region%20banners/great_ocean_road_metp89.jpg")
+test_venue = Venue.create!(name: "Test-Venue01", region_name: "Melbourne", address: "362 Beach Road; Black Rock", suburb: "Black Rock", email: "pfitz.dev@gmail.com ", link: "wwia.herokuapp.com", description: Faker::Lorem.paragraph(sentence_count: 25), banner: "https://res.cloudinary.com/dkowfxwpp/image/upload/v1580643734/wwia/region%20banners/great_ocean_road_metp89.jpg")
 
 def import_venues
   csv_options = { col_sep: '|', quote_char: '"', headers: :first_row, header_converters: :symbol }
@@ -63,10 +63,14 @@ end
 import_venues
 populate_venue_coordinate_data
 
-
+# jobs for test venue
+for x in (0..25) do
+  Job.create!(title: Faker::Job.title, description: Faker::Lorem.paragraph(sentence_count: 50), status: "Open", venue: test_venue)
+end
 def seed_jobs
+
   for x in (0..25) do
-    Job.create!(title: Faker::Job.title, description: Faker::Lorem.paragraph(sentence_count: 50), status: ["Open", "Filled"].sample, venue: Venue.order('RANDOM()').first)
+    Job.create!(title: Faker::Job.title, description: Faker::Lorem.paragraph(sentence_count: 50), status: "Open", venue: Venue.order('RANDOM()').first)
   end
   puts "#{Job.count} jobs created"
 end

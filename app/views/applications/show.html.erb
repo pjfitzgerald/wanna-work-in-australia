@@ -11,7 +11,7 @@
 <div class="container">
   <div class="app-show-card">
     <h4>Venue Details</h4>
-    <strong>Name: </strong><%= @application.job.venue.name %>
+    <strong>Name: </strong><%= link_to @application.job.venue.name, venue_path(@application.job.venue) %>
     <br><br>
     <strong>Job Title: </strong><%= @application.job.title %>
     <br><br>
