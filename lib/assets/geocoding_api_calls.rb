@@ -9,16 +9,36 @@ def geocode_address_lat(address)
   url = "https://maps.googleapis.com/maps/api/geocode/json?address=#{address}&key=#{Rails.application.credentials.google_maps_api_key}"
   serialized = open(url).read
   address_serialized = JSON.parse(serialized)
-  lat = JSON.neat_generate(address_serialized["results"][0]["geometry"]["location"]["lat"])
-  return lat
+  p address
+  if address_serialized["results"] == nil
+    begin
+      raise "geocoding results == nil for address: #{address}"
+    rescue => e
+      puts e
+    end
+  else
+    lat = JSON.neat_generate(address_serialized["results"][0]["geometry"]["location"]["lat"])
+    return lat
+  end
+  return false
 end
 
 def geocode_address_lng(address)
   url = "https://maps.googleapis.com/maps/api/geocode/json?address=#{address}&key=#{Rails.application.credentials.google_maps_api_key}"
   serialized = open(url).read
   address_serialized = JSON.parse(serialized)
-  lng = JSON.neat_generate(address_serialized["results"][0]["geometry"]["location"]["lng"])
-  return lng
+  p address
+  if address_serialized["results"] == nil
+    begin
+      raise "geocoding results == nil for address: #{address}"
+    rescue => e
+      puts e
+    end
+  else
+    lng = JSON.neat_generate(address_serialized["results"][0]["geometry"]["location"]["lng"])
+    return lng
+  end
+  return false
 end
 
 

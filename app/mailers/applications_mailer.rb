@@ -38,7 +38,7 @@ class ApplicationsMailer < ApplicationMailer
     
     attachments["applicant_resume"] = @application.resume.download
     # make sure all venues have an email on file, or adjust below to account for lack of an address
-    mail(to: @venue.email, subject: "#{@user.first_name} #{@user.last_name} has submitted an application to work for #{@venue.name}")
+    # mail(to: @venue.email, subject: "#{@user.first_name} #{@user.last_name} has submitted an application to work for #{@venue.name}")
 end
 
 end
