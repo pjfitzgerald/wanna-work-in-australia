@@ -1,0 +1,98 @@
+STATE | REGION-NAME
+
+NSW | Sydney
+NSW | Blue Mountains
+NSW | Capital Country
+NSW | Central Coast
+NSW | Central NSW
+NSW | Hunter
+NSW | New England North West
+NSW | North Coast NSW
+NSW | Outback NSW
+NSW | Riverina
+NSW | Snowy Mountains
+NSW | South Coast
+NSW | The Murray
+VIC | Melbourne
+VIC | Ballarat
+VIC | Bendigo Loddon
+VIC | Central Highlands
+VIC | Central Murray
+VIC | Geelong and the Bellarine
+VIC | Gippsland
+VIC | Goulburn
+VIC | High Country
+VIC | Lakes
+VIC | Macedon
+VIC | Mallee
+VIC | Melbourne East
+VIC | Murray East
+VIC | Mornington Peninsula
+VIC | Phillip Island
+VIC | Spa Country
+VIC | Yarra Valley
+VIC | Great Ocean Road
+VIC | Western Grampians
+VIC | Wimmera
+SA | Adelaide
+SA | Adelaide Hills
+SA | Barossa
+SA | Clare Valley
+SA | Eyre Peninsula
+SA | Fleurieu Peninsula
+SA | Limestone Coast
+SA | Murray River, Lakes and Coorong
+SA | Riverland
+SA | Yorke Peninsula
+SA | Flinders Ranges and Outback
+SA | Kangaroo Island
+QLD | Brisbane
+QLD | Bundaberg
+QLD | Southern Queensland Country
+QLD | Fraser Coast
+QLD | Gold Coast
+QLD | Mackay
+QLD | Townsville
+QLD | Outback Queensland
+QLD | Sunshine Coast
+QLD | Tropical North Queensland
+QLD | Whitsundays
+QLD | Capricorn
+QLD | Gladstone
+WA | Perth
+WA | Australia's Golden Outback
+WA | Australia's North West
+WA | Australia's South West
+WA | Australia's Coral Coast
+TAS | Hobart and the South
+TAS | East Coast
+TAS | Launceston and the North
+TAS | North West
+TAS | West Coast
+NT | Darwin
+NT | Barkly
+NT | Alice Springs
+NT | Litchfield Kakadu Arnhem
+NT | Katherine Daly
+NT | Lasseter
+NT | MacDonnell
+ACT | Canberra
+
+
+regions with missing descriptions/spiels:
+
+NSW | Central NSW
+NSW | New England North West
+NSW | Riverina
+NSW | South Coast
+VIC | Bendigo Loddon
+VIC | Central Highlands
+VIC | Goulburn
+VIC | Lakes
+VIC | Mallee
+VIC | Melbourne East
+VIC | Murray East
+VIC | Spa Country
+VIC | Wimmera
+QLD | Gladstone
+NT | MacDonnell
