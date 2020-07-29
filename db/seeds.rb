@@ -3,21 +3,22 @@ require 'faker'
 require 'csv'
 require_relative '../lib/assets/geocoding_api_calls.rb'
 
-
+puts 'destroying current data...'
 # if Rails.env.development?
-  Venue.destroy_all
-  Region.destroy_all
-  Job.destroy_all
-  Application.destroy_all
-  User.destroy_all
-  Resource.destroy_all
+Venue.destroy_all
+Region.destroy_all
+Job.destroy_all
+Application.destroy_all
+User.destroy_all
+Resource.destroy_all
 # end
+puts 'done.'
 
 def import_regions
   csv_options = { col_sep: '|', quote_char: '"', headers: :first_row, header_converters: :symbol }
-  file_path = 'tourism_regions.csv'
+  file_path = 'region_info/tourism_regions.csv'
   CSV.foreach(file_path, csv_options) do |row|
-    Region.create!(name: row[:region], state: row[:state], banner: row[:banner], description: row[:description], link: row[:link])
+    region = Region.create!(name: row[:region], state: row[:state], banner: row[:banner], description: row[:description], link: row[:link])
   end
   puts "#{Region.count} regions loaded"
 end
@@ -42,7 +43,6 @@ if Rails.env.development?
     puts "#{VenueAdmin.count} venue admins created"
     puts "#{User.count} total users created"
   end
-
   seed_users
 end
 
@@ -51,17 +51,22 @@ test_venue = Venue.create!(name: "Test-Venue01", region_name: "Melbourne", addre
 
 def import_venues
   csv_options = { col_sep: '|', quote_char: '"', headers: :first_row, header_converters: :symbol }
-  file_path = 'venue_import.csv'
+  file_path = 'venue_info/venue_import.csv'
   x = 1
   CSV.foreach(file_path, csv_options) do |row|
-    Venue.create!(name: row[:name], region_name: row[:region_name], address: row[:address], suburb: row[:suburb], email: row[:email], link: row[:link], phone: row[:phone], banner: row[:banner], description: Faker::Lorem.paragraph(sentence_count: 25))
+    new_venue = Venue.new(name: row[:name], region_name: row[:region_name], address: row[:address], suburb: row[:suburb], email: row[:email], link: row[:link], phone: row[:phone], banner: row[:banner], description: Faker::Lorem.paragraph(sentence_count: 25))
+    if Region.find_by(name: row[:region_name]) != nil
+      new_venue.save!
+    else
+      puts "Invalid region for venue: #{new_venue.name}! please adjust in seedfile"
+    end
     x += 1
   end
   puts "#{Venue.count} venues loaded"
 end
 
 import_venues
-populate_venue_coordinate_data
+# # populate_venue_coordinate_data
 
 # jobs for test venue
 for x in (0..25) do
