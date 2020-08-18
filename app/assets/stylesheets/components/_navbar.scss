@@ -12,15 +12,15 @@
 
 
 .navbar-wwia {
-  // position: -webkit-sticky; // for safari
-  // position: sticky;
+  position: -webkit-sticky; // for safari
+  position: sticky;
   top: 0px;
   z-index: 1020;
   justify-content: space-between;
-  // background: $primary;
-  background-color: transparent;
+  background: $primary;
+  // background-color: transparent;
   transition: 0.5s background-color ease;
-  // opacity: 0.8;
+  opacity: 0.8;
   // box-shadow: 0px 2px 3px rgba(0,0,0,.2);
 }
 
