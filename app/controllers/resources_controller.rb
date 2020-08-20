@@ -9,4 +9,16 @@ class ResourcesController < ApplicationController
     @resource = Resource.find(params[:id])
   end
 
+  def visa; end
+  def super; end
+  def driving; end
+  def rsa; end
+  def work_cover; end
+  def health; end
+  def rates; end
+  def accommodation; end
+  def tfn; end
+  def banking; end
+  def phone; end
+
 end

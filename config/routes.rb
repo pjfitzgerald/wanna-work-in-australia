@@ -26,6 +26,17 @@ Rails.application.routes.draw do
   end
   
   resources :resources, only: [:index, :show]
+  get "visa", to: "resources#visa"
+  get "super", to: "resources#super"
+  get "driving", to: "resources#driving"
+  get "rsa", to: "resources#rsa"
+  get "work_cover", to: "resources#work_cover"
+  get "health", to: "resources#health"
+  get "rates", to: "resources#rates"
+  get "accommodation", to: "resources#accommodation"
+  get "tfn", to: "resources#tfn"
+  get "banking", to: "resources#banking"
+  get "phone", to: "resources#phone"
 
   get "venues/active", to: "venues#active", as: :active_venues
   get "search", to: "venues#search", as: :search

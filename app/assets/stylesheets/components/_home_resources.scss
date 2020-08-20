@@ -11,7 +11,8 @@
 }
 
 .home-resources-cards-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   flex-wrap: wrap;
 }
 
@@ -36,4 +37,8 @@
 .home-resource-card:hover .home-resource-card-infos h5{
   color: #d3d3d3;
   
+}
+
+.home-resources-blurb {
+  margin-top: 20px;
 }

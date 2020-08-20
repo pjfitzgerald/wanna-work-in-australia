@@ -2,16 +2,65 @@
     <div class="container">
       <div class="home-resources-headers">
         <h3>How to work in Australia</h3>
-        <h6>All the relevant information you'll need</h6>
+        <h6>All the information you'll need</h6>
+        <div class="home-resources-blurb">
+          <p>Working in Australia is perfect for many backpackers. As the number one backpacker’s destination in the world, and with millions of tourists making the trip each year, it’s not surprising that staying in Australia long term is high on a lot of backpacker’s bucket lists. Getting your holiday visa and setting up your new life in Australia can be a scary process especially when you’re planning it from thousands of kilometres away. It can be overwhelming and sometimes hard to find all the information that you need, so we’ve broken down everything you need to know about living and working in Australia.</p>
+        </div>
       </div>
       <div class="home-resources-cards-container">
-        <% @resources.each do |resource| %>
-          <a class="home-resource-card" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.5)) ,url(<%= resource.banner %>;" href="<%= resource_path(resource) %>">
-            <div class="home-resource-card-infos"> 
-              <h5><%= resource.title %></h5>
-            </div>
-          </a>
-        <% end %>
+        <a class="home-resource-card" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.5)),url(<%= Resource.find_by(title: "Visa Information").banner %>;" href="<%= visa_path %>">
+          <div class="home-resource-card-infos"> 
+            <h5>Visa Information</h5>
+          </div>
+        </a>
+        <a class="home-resource-card" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.5)),url(<%= Resource.find_by(title: "Superannuation").banner %>;" href="<%= super_path %>">
+          <div class="home-resource-card-infos"> 
+            <h5>Superannuation</h5>
+          </div>
+        </a>
+        <a class="home-resource-card" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.5)),url(<%= Resource.find_by(title: "Driving in Australia").banner %>;" href="<%= driving_path %>">
+          <div class="home-resource-card-infos"> 
+            <h5>Driving in Australia</h5>
+          </div>
+        </a>
+        <a class="home-resource-card" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.5)),url(<%= Resource.find_by(title: "RSA").banner %>;" href="<%= rsa_path %>">
+          <div class="home-resource-card-infos"> 
+            <h5>RSA</h5>
+          </div>
+        </a>
+        <a class="home-resource-card" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.5)),url(<%= Resource.find_by(title: "Work Cover").banner %>;" href="<%= work_cover_path %>">
+          <div class="home-resource-card-infos"> 
+            <h5>Work Cover</h5>
+          </div>
+        </a>
+        <a class="home-resource-card" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.5)),url(<%= Resource.find_by(title: "Health").banner %>;" href="<%= health_path %>">
+          <div class="home-resource-card-infos"> 
+            <h5>Health</h5>
+          </div>
+        </a>
+        <a class="home-resource-card" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.5)),url(<%= Resource.find_by(title: "Rates of Pay").banner %>;" href="<%= rates_path %>">
+          <div class="home-resource-card-infos"> 
+            <h5>Rates of Pay</h5>
+          </div>
+        </a>
+        <a class="home-resource-card" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.5)),url(<%= Resource.find_by(title: "Accommodation").banner %>;" href="<%= accommodation_path %>">
+          <div class="home-resource-card-infos"> 
+            <h5>Accommodation</h5>
+        <a class="home-resource-card" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.5)),url(<%= Resource.find_by(title: "Tax File Number").banner %>;" href="<%= tfn_path %>">
+          <div class="home-resource-card-infos"> 
+            <h5>Tax File Number</h5>
+          </div>
+        </a>
+        <a class="home-resource-card" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.5)),url(<%= Resource.find_by(title: "Banking").banner %>;" href="<%= banking_path %>">
+          <div class="home-resource-card-infos"> 
+            <h5>Banking</h5>
+          </div>
+        </a>
+        <a class="home-resource-card" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.5)),url(<%= Resource.find_by(title: "Getting a Phone Number").banner %>;" href="<%= phone_path %>">
+          <div class="home-resource-card-infos"> 
+            <h5>Getting a Phone Number</h5>
+          </div>
+        </a>
       </div>
     </div>
   </div>
