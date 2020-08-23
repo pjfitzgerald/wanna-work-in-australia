@@ -12,15 +12,16 @@
 
 .home-resources-cards-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  flex-wrap: wrap;
+  grid-template-columns: 1fr 1fr 1fr;
+  // flex-wrap: wrap;
+  grid-gap: 5px;
 }
 
 .home-resource-card {
   box-shadow: 0 0 5px rgba(94, 67, 67, 0.2);
-  margin: 5px;
+  // margin: 5px;
   height: 200px;
-  width: 200px;
+  // width: 200px;
   flex: 1 0 21%;
   display: flex;
   align-items: center;

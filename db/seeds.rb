@@ -159,7 +159,28 @@ def seed_resources
     banner: "https://res.cloudinary.com/dkowfxwpp/image/upload/v1582358870/wwia/resource%20banners/accom_resource_uxwblv.jpg")
   Resource.create!(
     title: "Getting a Phone Number",
-    description: "",
+    description: "<div class=\"container\">
+  <div class=\"card-resource-show\">
+    <h2>Getting a Phone Number</h2>
+  
+    <p>
+      Getting your mobile phone number organised in Australia is pretty straight forward. There are a number of different companies you can choose to go with, with the 3 main companies being Telstra, Vodafone and Optus. 
+    </p>
+
+    <p>
+      You can sign up to a contracted plan (paid monthly) or a pay-as-you-go plan (paid for when and if you need it). 
+    </p>
+
+    <p>
+      If using a phone from another country, you’ll just need to ensure that you have had it unlocked before you leave your country of origin. 
+    </p>
+
+    <p>
+      To get a SIM card or sign up to a contract, you’ll need to present your passport and the store assistant can set you up in store with a number there and then. Be aware that mobile phone data can be a lot more expensive than other parts of the world. 
+    </p>
+
+  </div>
+</div>".html_safe,
     banner: "https://res.cloudinary.com/dkowfxwpp/image/upload/v1582358870/wwia/resource%20banners/accom_resource_uxwblv.jpg")
   puts "#{Resource.count} resources created"
 end
