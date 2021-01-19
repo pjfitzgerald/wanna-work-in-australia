@@ -9,7 +9,7 @@ gem 'puma'
 gem 'rails', '5.2.3'
 gem 'redis'
 gem 'cloudinary', '~> 1.9.1'
-gem 'rmagick'
+gem 'rmagick', '~> 4.1.0.rc2' # adjusted from 4.0.0 to support ImageMagick 7 --> 19/01/21
 gem 'faker'
 gem 'neatjson'
 gem 'pundit'
